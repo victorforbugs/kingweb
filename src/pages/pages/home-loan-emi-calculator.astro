@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home Loan EMI Calculator | TrueCred Loan Expert">
+
+<!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <a href="/pages/calculators">Calculators</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Home Loan EMI Calculator</span>
+      </div>
+      <h1>Home Loan EMI Calculator</h1>
+      <p class="hero-sub">Calculate your home loan EMI with precision. Compare fixed vs floating rates, view amortization schedules, and plan your dream home purchase with confidence.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-bolt"></i> <span>Calculation: Instant</span></div>
+        <div class="highlight-item"><i class="fas fa-home"></i> <span>Loans up to ₹5 Crore</span></div>
+        <div class="highlight-item"><i class="fas fa-percent"></i> <span>Rates from 8.35% p.a.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>What is a Home Loan EMI?</h2>
+          <p>A home loan EMI is the fixed monthly payment you make towards repaying your housing loan. Since home loans typically span 15-30 years, understanding your EMI is crucial for long-term financial planning. Each EMI consists of a principal component and an interest component — in the early years, most of your EMI goes toward interest, gradually shifting toward principal repayment as the loan matures.</p>
+          <p>Home loans in India are available at some of the lowest interest rates among all loan categories, starting from 8.35% p.a. With the long tenure, even a small difference of 0.25% in interest rate can translate to savings of several lakhs over the loan's lifetime.</p>
+
+          <h3>How is Home Loan EMI Calculated?</h3>
+          <p>The home loan EMI formula is the same as any reducing-balance EMI: EMI = [P × r × (1+r)^n] / [(1+r)^n – 1]. However, with home loans, the numbers are much larger — loan amounts run into crores and tenures can go up to 30 years (360 months). This makes the calculator especially valuable for planning, as manual calculations become impractical.</p>
+          <p><strong>Fixed vs Floating Rate:</strong> Fixed-rate home loans keep your EMI constant throughout, while floating-rate loans may see EMI changes when the bank revises its lending rate linked to RBI's repo rate.</p>
+
+          <!-- Calculator Widget -->
+          <div class="calculator-widget">
+            <h3><i class="fas fa-home" style="color: var(--primary); margin-right: 8px;"></i> Home Loan EMI Calculator</h3>
+            <div class="calc-form-group">
+              <label for="loanAmount">Loan Amount: <strong id="loanAmountDisplay">₹50,00,000</strong></label>
+              <input type="range" id="loanAmount" min="500000" max="50000000" value="5000000" step="100000">
+              <div class="calc-range-labels"><span>₹5 Lakh</span><span>₹5 Crore</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="interestRateDisplay">8.5%</strong></label>
+              <input type="range" id="interestRate" min="7" max="14" value="8.5" step="0.1">
+              <div class="calc-range-labels"><span>7%</span><span>14%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="loanTenure">Loan Tenure (Years): <strong id="loanTenureDisplay">20 Years</strong></label>
+              <input type="range" id="loanTenure" min="5" max="30" value="20" step="1">
+              <div class="calc-range-labels"><span>5 Years</span><span>30 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Monthly EMI</span><span class="calc-value" id="emiResult">₹43,391</span></div>
+              <div class="calc-result-item"><span class="calc-label">Total Interest</span><span class="calc-value" id="totalInterest">₹54,13,755</span></div>
+              <div class="calc-result-item"><span class="calc-label">Total Amount</span><span class="calc-value" id="totalAmount">₹1,04,13,755</span></div>
+            </div>
+          </div>
+
+          <h3>Example Calculation</h3>
+          <p>For a home loan of <strong>₹50,00,000</strong> at <strong>8.5% p.a.</strong> for <strong>20 years</strong>:</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> Monthly EMI = ₹43,391</li>
+            <li><i class="fas fa-circle-check"></i> Total Interest Payable = ₹54,13,755</li>
+            <li><i class="fas fa-circle-check"></i> Total Amount Payable = ₹1,04,13,755</li>
+          </ul>
+          <p>This means you'll pay over ₹54 lakhs in interest alone — nearly as much as the loan itself. This is why prepayments and choosing the lowest possible rate are critical for home loans.</p>
+
+          <h3>Home Loan EMI Comparison Table</h3>
+          <table class="rate-table">
+            <thead><tr><th>Loan Amount</th><th>Rate</th><th>Tenure</th><th>Monthly EMI</th><th>Total Interest</th></tr></thead>
+            <tbody>
+              <tr><td>₹25,00,000</td><td>8.5%</td><td>15 Years</td><td>₹24,614</td><td>₹19,30,558</td></tr>
+              <tr><td>₹50,00,000</td><td>8.5%</td><td>20 Years</td><td>₹43,391</td><td>₹54,13,755</td></tr>
+              <tr><td>₹75,00,000</td><td>8.75%</td><td>25 Years</td><td>₹69,213</td><td>₹1,32,63,766</td></tr>
+              <tr><td>₹1,00,00,000</td><td>9%</td><td>30 Years</td><td>₹80,462</td><td>₹1,89,66,477</td></tr>
+              <tr><td>₹1,50,00,000</td><td>8.35%</td><td>20 Years</td><td>₹1,28,139</td><td>₹1,57,53,311</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Home Loan EMI Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Plan Your Budget</strong> — Know exactly how much of your salary goes towards EMI before buying a property</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Compare Fixed vs Floating</strong> — See how different rate types affect your total outflow</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Tax Benefit Insight</strong> — Understand principal (80C) and interest (24b) deduction components</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Prepayment Analysis</strong> — Model scenarios with extra payments to see tenure and interest savings</li>
+            <li><i class="fas fa-circle-check"></i> <strong>30+ Bank Rates</strong> — Compare current home loan rates from SBI, HDFC, ICICI, and more</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Free and Unlimited</strong> — Use as many times as needed with zero cost or sign-up</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Property Value</h4><p>Set the loan amount based on your property cost minus down payment. Home loans cover up to 80-90% of property value.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Set Interest Rate</h4><p>Enter the rate offered by your lender. Current home loan rates start from 8.35% p.a. for salaried borrowers.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Choose Tenure</h4><p>Select repayment tenure between 5-30 years. Longer tenure means lower EMI but higher total interest.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>Review & Compare</h4><p>Analyze your EMI, total interest, and total payable. Adjust inputs to find the most affordable combination.</p></div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Apply for Home Loan</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Loan Amount</option>
+                  <option value="2500000">₹25,00,000</option>
+                  <option value="5000000">₹50,00,000</option>
+                  <option value="7500000">₹75,00,000</option>
+                  <option value="10000000">₹1,00,00,000</option>
+                  <option value="15000000">₹1,50,00,000</option>
+                  <option value="20000000">₹2,00,00,000</option>
+                  <option value="50000000">₹5,00,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Check Offers <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/business-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Business Loan EMI</a>
+              <a href="/pages/home-loan-eligibility"><i class="fas fa-chevron-right"></i> Home Loan Eligibility</a>
+              <a href="/pages/home-loan-prepayment"><i class="fas fa-chevron-right"></i> Home Loan Prepayment</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2>Home Loan EMI — FAQs</h2>
+        <p>Common questions about home loan EMI calculations answered.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">What is the EMI for a ₹50 lakh home loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">For a ₹50 lakh home loan at 8.5% for 20 years, the EMI is approximately ₹43,391 per month. The exact amount depends on your lender's rate and chosen tenure. A 30-year tenure reduces it to ₹38,446 but increases total interest significantly.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Should I choose a fixed or floating interest rate?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Floating rates are generally 0.5-1% lower than fixed rates and benefit from future rate cuts by RBI. However, they carry the risk of EMI increases if rates rise. Fixed rates give certainty but cost more. Most borrowers in India prefer floating rates since the trend has been downward over the long term.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I get tax benefits on my home loan EMI?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes. Under Section 24(b), you can claim up to ₹2 lakh per year deduction on the interest component of your home loan EMI. Under Section 80C, you can claim up to ₹1.5 lakh per year on the principal repayment component. First-time home buyers get an additional ₹50,000 deduction under Section 80EEA.</div></div></div>
+        <div class="faq-item"><button class="faq-question">How much home loan can I get on a ₹50,000 salary?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Banks typically allow EMIs up to 50-60% of your net monthly income. With a ₹50,000 salary and no existing EMIs, you could get a home loan with an EMI of about ₹25,000-30,000, which translates to a loan of approximately ₹25-30 lakhs at 8.5% for 20 years.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Does prepayment reduce my home loan EMI?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, making a lump sum prepayment reduces your outstanding principal. You can then choose to reduce your EMI amount (keeping the same tenure) or keep the same EMI and reduce the tenure. Most experts recommend reducing tenure, as it saves more on total interest. Per RBI rules, there are no prepayment charges on floating-rate home loans.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page CTA -->
+  <section class="page-content" style="padding-top:0;">
+    <div class="container">
+      <div class="page-cta">
+        <div>
+          <h3>Ready to Own Your Dream Home?</h3>
+          <p>Compare home loan offers from 30+ banks and get rates starting at just 8.35% p.a.</p>
+        </div>
+        <a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Apply Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+</BaseLayout>

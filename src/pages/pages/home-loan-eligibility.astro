@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home Loan Eligibility Calculator | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>Home Loan Eligibility Calculator</span></div>
+      <h1>Home Loan Eligibility Calculator</h1>
+      <p class="hero-sub">Discover the maximum home loan amount you qualify for based on your income, age, and existing obligations. Plan your property budget with confidence.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-home"></i> <span>Max Loan: Up to ₹5 Cr</span></div>
+        <div class="highlight-item"><i class="fas fa-user-check"></i> <span>Eligibility: Instant</span></div>
+        <div class="highlight-item"><i class="fas fa-percent"></i> <span>Rates from 8.35%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>How Much Home Loan Can You Get?</h2>
+          <p>Your home loan eligibility is determined by your monthly income, age (which determines maximum tenure), existing loans, and the interest rate. Banks typically allow up to 60% of your net income to go towards total EMIs. Since home loans have tenures of up to 30 years, even a moderate salary can qualify for a substantial home loan.</p>
+          <p>Additionally, you can boost your eligible amount by adding a co-applicant (spouse, parent) and combining incomes. Most banks also offer 80-90% of the property value as loan, so you need to arrange only 10-20% as down payment.</p>
+
+          <h3>How is Home Loan Eligibility Calculated?</h3>
+          <p>The calculator computes the maximum affordable EMI as 60% of your net income minus existing EMIs. It then works backwards using the EMI formula to determine the loan principal you can borrow at the given rate and tenure. This approach mirrors how banks assess your application.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-home" style="color: var(--primary); margin-right: 8px;"></i> Home Loan Eligibility Calculator</h3>
+            <div class="calc-form-group">
+              <label for="monthlyIncome">Monthly Income (Net): <strong id="incomeDisplay">₹80,000</strong></label>
+              <input type="range" id="monthlyIncome" min="20000" max="1000000" value="80000" step="5000">
+              <div class="calc-range-labels"><span>₹20,000</span><span>₹10,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="existingEMI">Existing Monthly EMIs: <strong id="emiDisplay">₹10,000</strong></label>
+              <input type="range" id="existingEMI" min="0" max="300000" value="10000" step="1000">
+              <div class="calc-range-labels"><span>₹0</span><span>₹3,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="rateDisplay">8.5%</strong></label>
+              <input type="range" id="interestRate" min="7" max="12" value="8.5" step="0.1">
+              <div class="calc-range-labels"><span>7%</span><span>12%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="loanTenure">Tenure (Years): <strong id="tenureDisplay">20 Years</strong></label>
+              <input type="range" id="loanTenure" min="5" max="30" value="20" step="1">
+              <div class="calc-range-labels"><span>5 Years</span><span>30 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Max Eligible Loan</span><span class="calc-value" id="eligibleAmount">₹42,57,040</span></div>
+              <div class="calc-result-item"><span class="calc-label">Affordable EMI</span><span class="calc-value" id="maxEMI">₹38,000</span></div>
+              <div class="calc-result-item"><span class="calc-label">FOIR Used</span><span class="calc-value" id="foirUsed">60%</span></div>
+            </div>
+          </div>
+
+          <h3>Home Loan Eligibility by Salary</h3>
+          <table class="rate-table">
+            <thead><tr><th>Monthly Salary</th><th>Existing EMI</th><th>Max EMI (60%)</th><th>Eligible (20yr, 8.5%)</th></tr></thead>
+            <tbody>
+              <tr><td>₹40,000</td><td>₹0</td><td>₹24,000</td><td>₹27,64,488</td></tr>
+              <tr><td>₹60,000</td><td>₹5,000</td><td>₹31,000</td><td>₹35,70,797</td></tr>
+              <tr><td>₹80,000</td><td>₹10,000</td><td>₹38,000</td><td>₹43,77,107</td></tr>
+              <tr><td>₹1,20,000</td><td>₹15,000</td><td>₹57,000</td><td>₹65,65,660</td></tr>
+              <tr><td>₹2,00,000</td><td>₹20,000</td><td>₹1,00,000</td><td>₹1,15,18,702</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Home Loan Eligibility Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Set Your Property Budget</strong> — Know the maximum you can borrow before you start house hunting</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Co-Applicant Planning</strong> — Model how adding spouse income boosts your eligibility</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Age-Based Tenure</strong> — Understand how your age limits the maximum tenure and thus eligible amount</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Down Payment Estimate</strong> — Calculate the 10-20% you need to arrange separately</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Debt Optimization</strong> — See how clearing other EMIs increases your home loan capacity</li>
+            <li><i class="fas fa-circle-check"></i> <strong>No Impact on Score</strong> — Soft check only, your CIBIL stays safe</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Net Income</h4><p>Input your monthly take-home salary. Add co-applicant income for a joint loan estimate.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Add Existing EMIs</h4><p>Enter all current loan EMIs — personal loan, car loan, credit card minimums.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Set Rate & Tenure</h4><p>Use current market rate (8.35-9%) and tenure based on years to retirement (max 30).</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>View Eligible Amount</h4><p>See your maximum loan amount and affordable EMI to set your property search budget.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Apply for Home Loan</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Loan Amount</option>
+                  <option value="2500000">₹25,00,000</option>
+                  <option value="5000000">₹50,00,000</option>
+                  <option value="7500000">₹75,00,000</option>
+                  <option value="10000000">₹1,00,00,000</option>
+                  <option value="20000000">₹2,00,00,000</option>
+                  <option value="50000000">₹5,00,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+              <a href="/pages/home-loan-prepayment"><i class="fas fa-chevron-right"></i> Home Loan Prepayment</a>
+              <a href="/pages/personal-loan-eligibility"><i class="fas fa-chevron-right"></i> Personal Loan Eligibility</a>
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>Home Loan Eligibility — FAQs</h2><p>Everything about home loan eligibility, answered.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">How much home loan can I get on a ₹60,000 salary?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">With a ₹60,000 monthly salary and no existing EMIs, banks typically approve up to ₹40-45 lakhs at 8.5% for 20 years. With a co-applicant earning ₹30,000, this could increase to ₹55-60 lakhs. The exact amount depends on your credit score, employer category, and existing financial obligations.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I get a home loan with a low CIBIL score?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Most banks require a minimum CIBIL score of 650-700 for home loans. With a score below 650, you may face rejection from major banks. However, some NBFCs and housing finance companies approve home loans with scores as low as 600, though at 1-2% higher interest rates. Improving your score before applying is always recommended.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Does adding a co-applicant increase home loan eligibility?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, adding a co-applicant (typically spouse or parent) is one of the most effective ways to increase eligibility. The bank considers the combined income, which directly increases the affordable EMI and thus the eligible loan amount. Both applicants' credit scores are checked, so ensure the co-applicant also has a good score.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the maximum tenure for a home loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">The maximum home loan tenure is 30 years, but it's also capped by your age. Most banks require the loan to be fully repaid by age 60-65 for salaried and 65-70 for self-employed individuals. So if you're 40, your maximum tenure would be 20-25 years. Longer tenure means lower EMI but significantly higher total interest.</div></div></div>
+        <div class="faq-item"><button class="faq-question">How much down payment do I need for a home loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Banks finance 80-90% of the property value for properties up to ₹30 lakhs, and 75-80% for properties above ₹75 lakhs. You need to arrange the remaining 10-25% as a down payment from your own funds. Registration charges, stamp duty, and interior costs are separate and usually not covered by the loan.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;"><div class="container"><div class="page-cta"><div><h3>Find Your Dream Home Budget</h3><p>Check eligibility from 30+ banks and get home loan rates starting at 8.35% p.a.</p></div><a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Check Now <i class="fas fa-arrow-right"></i></a></div></div></section>
+
+</BaseLayout>

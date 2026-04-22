@@ -1,0 +1,47 @@
+{
+  "personal_loan": {
+    "starting_rate": "9.98%",
+    "rate_label": "9.98% p.a.",
+    "banks": [
+      { "name": "SBI", "rate": "11.00% onwards", "processing_fee": "Up to 1.50%", "max_tenure": "6 Years" },
+      { "name": "HDFC Bank", "rate": "10.50% onwards", "processing_fee": "Up to 2.50%", "max_tenure": "5 Years" },
+      { "name": "ICICI Bank", "rate": "10.75% onwards", "processing_fee": "Up to 2.25%", "max_tenure": "5 Years" },
+      { "name": "Axis Bank", "rate": "10.49% onwards", "processing_fee": "Up to 2.00%", "max_tenure": "5 Years" },
+      { "name": "Kotak Mahindra Bank", "rate": "10.99% onwards", "processing_fee": "Up to 2.50%", "max_tenure": "5 Years" }
+    ]
+  },
+  "home_loan": {
+    "starting_rate": "8.35%",
+    "rate_label": "8.35% p.a.",
+    "banks": [
+      { "name": "SBI", "rate": "8.50% onwards", "processing_fee": "Up to 0.35%", "max_tenure": "30 Years" },
+      { "name": "HDFC Bank", "rate": "8.75% onwards", "processing_fee": "Up to 0.50%", "max_tenure": "30 Years" },
+      { "name": "ICICI Bank", "rate": "8.80% onwards", "processing_fee": "Up to 0.50%", "max_tenure": "30 Years" },
+      { "name": "LIC HFL", "rate": "8.50% onwards", "processing_fee": "Up to 0.50%", "max_tenure": "30 Years" },
+      { "name": "PNB Housing", "rate": "8.75% onwards", "processing_fee": "Up to 0.35%", "max_tenure": "25 Years" }
+    ]
+  },
+  "business_loan": {
+    "starting_rate": "14.00%",
+    "rate_label": "14.00% p.a.",
+    "banks": [
+      { "name": "HDFC Bank", "rate": "14.50% onwards", "processing_fee": "Up to 2.50%", "max_tenure": "5 Years" },
+      { "name": "ICICI Bank", "rate": "15.00% onwards", "processing_fee": "Up to 2.00%", "max_tenure": "5 Years" },
+      { "name": "Bajaj Finserv", "rate": "14.00% onwards", "processing_fee": "Up to 3.00%", "max_tenure": "5 Years" },
+      { "name": "Tata Capital", "rate": "15.50% onwards", "processing_fee": "Up to 2.50%", "max_tenure": "4 Years" },
+      { "name": "Kotak Mahindra Bank", "rate": "16.00% onwards", "processing_fee": "Up to 2.00%", "max_tenure": "5 Years" }
+    ]
+  },
+  "gold_loan": {
+    "starting_rate": "7.50%",
+    "rate_label": "7.50% p.a."
+  },
+  "car_loan": {
+    "starting_rate": "8.50%",
+    "rate_label": "8.50% p.a."
+  },
+  "education_loan": {
+    "starting_rate": "8.15%",
+    "rate_label": "8.15% p.a."
+  }
+}

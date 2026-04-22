@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Customer Reviews | TrueCred Loan Expert">
+
+<!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Customer Reviews</span>
+      </div>
+      <h1>Customer Reviews</h1>
+      <p class="hero-sub">Real stories from real customers who trusted TrueCred Loan Expert. Read <strong id="reviewCount">0</strong> verified reviews from our satisfied customers across India.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <i class="fas fa-star"></i>
+          <span>4.8/5 Average Rating</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-users"></i>
+          <span>10,000+ Happy Customers</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-shield-halved"></i>
+          <span>100% Verified Reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Reviews -->
+  <section class="page-content">
+    <div class="container">
+      <div id="allReviewsGrid" class="reviews-grid">
+        <!-- Reviews loaded dynamically from data/reviews.csv -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-content" style="padding-top:0;">
+    <div class="container">
+      <div class="page-cta">
+        <div>
+          <h3>Join Thousands of Happy Customers</h3>
+          <p>Compare offers from 80+ lenders and get instant approval for loans, credit cards, and investments.</p>
+        </div>
+        <a href="/" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">
+          Get Started <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+</BaseLayout>

@@ -1,0 +1,338 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Personal Loan EMI Calculator | TrueCred Loan Expert">
+
+<!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <a href="/pages/calculators">Calculators</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Personal Loan EMI Calculator</span>
+      </div>
+      <h1>Personal Loan EMI Calculator</h1>
+      <p class="hero-sub">Calculate your personal loan EMI instantly. View your complete amortization schedule, total interest payable, and compare offers from 50+ lenders — all in one place.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <i class="fas fa-bolt"></i>
+          <span>Calculation: Instant</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-building-columns"></i>
+          <span>Compare: 50+ Lenders</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-percent"></i>
+          <span>Rates from 9.98% p.a.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+
+        <!-- Main Content -->
+        <div class="content-main">
+          <h2>What is a Personal Loan EMI?</h2>
+          <p>EMI stands for Equated Monthly Instalment — the fixed amount you pay every month to your lender until the loan is fully repaid. A personal loan EMI includes both the principal repayment and the interest charged on the outstanding balance. Understanding your EMI before taking a loan helps you plan your monthly budget effectively and avoid financial strain.</p>
+          <p>Our Personal Loan EMI Calculator lets you compute the exact monthly payment for any loan amount, interest rate, and tenure combination. It also shows you the total interest you'll pay over the life of the loan and provides a month-by-month amortization breakdown so you know exactly how your payments are split between principal and interest.</p>
+
+          <h3>How is Personal Loan EMI Calculated?</h3>
+          <p>The EMI is calculated using a standard reducing-balance formula. In simple terms: the calculator takes your loan amount, divides it across the number of months in your tenure, and adds the applicable interest on the remaining balance each month. The formula ensures your monthly payment stays the same throughout the tenure even though the interest-to-principal ratio changes over time.</p>
+          <p><strong>The formula:</strong> EMI = [P × r × (1+r)^n] / [(1+r)^n – 1], where P is the loan amount, r is the monthly interest rate (annual rate divided by 12 and then by 100), and n is the total number of monthly instalments.</p>
+
+          <!-- Calculator Widget -->
+          <div class="calculator-widget">
+            <h3><i class="fas fa-calculator" style="color: var(--primary); margin-right: 8px;"></i> Personal Loan EMI Calculator</h3>
+
+            <div class="calc-form-group">
+              <label for="loanAmount">Loan Amount: <strong id="loanAmountDisplay">₹5,00,000</strong></label>
+              <input type="range" id="loanAmount" min="50000" max="4000000" value="500000" step="10000">
+              <div class="calc-range-labels">
+                <span>₹50,000</span>
+                <span>₹40,00,000</span>
+              </div>
+            </div>
+
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="interestRateDisplay">12%</strong></label>
+              <input type="range" id="interestRate" min="9" max="24" value="12" step="0.25">
+              <div class="calc-range-labels">
+                <span>9%</span>
+                <span>24%</span>
+              </div>
+            </div>
+
+            <div class="calc-form-group">
+              <label for="loanTenure">Loan Tenure (Years): <strong id="loanTenureDisplay">3 Years</strong></label>
+              <input type="range" id="loanTenure" min="1" max="5" value="3" step="1">
+              <div class="calc-range-labels">
+                <span>1 Year</span>
+                <span>5 Years</span>
+              </div>
+            </div>
+
+            <div class="calc-result">
+              <div class="calc-result-item">
+                <span class="calc-label">Monthly EMI</span>
+                <span class="calc-value" id="emiResult">₹16,607</span>
+              </div>
+              <div class="calc-result-item">
+                <span class="calc-label">Total Interest</span>
+                <span class="calc-value" id="totalInterest">₹97,862</span>
+              </div>
+              <div class="calc-result-item">
+                <span class="calc-label">Total Amount</span>
+                <span class="calc-value" id="totalAmount">₹5,97,862</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>Example Calculation</h3>
+          <p>Suppose you take a personal loan of <strong>₹5,00,000</strong> at an interest rate of <strong>12% p.a.</strong> for a tenure of <strong>3 years (36 months)</strong>. Using the EMI formula:</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> Monthly EMI = ₹16,607</li>
+            <li><i class="fas fa-circle-check"></i> Total Interest Payable = ₹97,862</li>
+            <li><i class="fas fa-circle-check"></i> Total Amount Payable = ₹5,97,862</li>
+          </ul>
+          <p>In the first month, approximately ₹5,000 goes towards interest and ₹11,607 towards reducing the principal. By the last month, nearly the entire EMI goes towards principal repayment.</p>
+
+          <h3>EMI Comparison for Different Loan Amounts</h3>
+          <table class="rate-table">
+            <thead>
+              <tr>
+                <th>Loan Amount</th>
+                <th>Interest Rate</th>
+                <th>Tenure</th>
+                <th>Monthly EMI</th>
+                <th>Total Interest</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>₹1,00,000</td>
+                <td>12%</td>
+                <td>2 Years</td>
+                <td>₹4,707</td>
+                <td>₹12,977</td>
+              </tr>
+              <tr>
+                <td>₹3,00,000</td>
+                <td>11%</td>
+                <td>3 Years</td>
+                <td>₹9,819</td>
+                <td>₹53,484</td>
+              </tr>
+              <tr>
+                <td>₹5,00,000</td>
+                <td>12%</td>
+                <td>3 Years</td>
+                <td>₹16,607</td>
+                <td>₹97,862</td>
+              </tr>
+              <tr>
+                <td>₹10,00,000</td>
+                <td>10.5%</td>
+                <td>5 Years</td>
+                <td>₹21,494</td>
+                <td>₹2,89,650</td>
+              </tr>
+              <tr>
+                <td>₹20,00,000</td>
+                <td>11%</td>
+                <td>5 Years</td>
+                <td>₹43,497</td>
+                <td>₹6,09,828</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Personal Loan EMI Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Instant Results</strong> — Get accurate EMI figures in seconds without any manual calculations</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Amortization Breakdown</strong> — See how each payment splits between principal and interest over time</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Compare Scenarios</strong> — Adjust amount, rate, and tenure sliders to find the most affordable combination</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Budget Planning</strong> — Know your exact monthly outflow before applying so there are no surprises</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Multi-Lender Comparison</strong> — Compare EMIs across 50+ banks and NBFCs to find the cheapest option</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Completely Free</strong> — No sign-up or registration required, use the calculator as many times as you need</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-num">1</div>
+              <h4>Enter Loan Amount</h4>
+              <p>Use the slider to set your desired personal loan amount between ₹50,000 and ₹40 lakhs.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">2</div>
+              <h4>Set Interest Rate</h4>
+              <p>Adjust the interest rate slider. Check current rates from various lenders above for reference.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">3</div>
+              <h4>Choose Tenure</h4>
+              <p>Select your preferred loan repayment tenure from 1 to 5 years based on your budget.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">4</div>
+              <h4>View Results</h4>
+              <p>Instantly see your monthly EMI, total interest payable, and the total repayment amount.</p>
+            </div>
+          </div>
+
+          <h3>Tips to Reduce Your Personal Loan EMI</h3>
+          <p>If your calculated EMI seems too high, consider these strategies to bring it down:</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> Improve your CIBIL score to 750+ before applying — this unlocks the lowest interest rates</li>
+            <li><i class="fas fa-circle-check"></i> Opt for a longer tenure to spread payments, but keep total interest in mind</li>
+            <li><i class="fas fa-circle-check"></i> Compare rates on TrueCred before choosing a lender — even a 0.5% difference saves thousands</li>
+            <li><i class="fas fa-circle-check"></i> Consider a balance transfer if your current lender's rate is higher than market rates</li>
+          </ul>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Get Best Loan Offer</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="Full Name" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required>
+              </div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Loan Amount</option>
+                  <option value="50000">₹50,000</option>
+                  <option value="100000">₹1,00,000</option>
+                  <option value="200000">₹2,00,000</option>
+                  <option value="300000">₹3,00,000</option>
+                  <option value="500000">₹5,00,000</option>
+                  <option value="1000000">₹10,00,000</option>
+                  <option value="2000000">₹20,00,000</option>
+                  <option value="3000000">₹30,00,000</option>
+                  <option value="4000000">₹40,00,000</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="City" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">
+                Check Offers <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI Calculator</a>
+              <a href="/pages/business-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Business Loan EMI Calculator</a>
+              <a href="/pages/gold-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Gold Loan EMI Calculator</a>
+              <a href="/pages/personal-loan-eligibility"><i class="fas fa-chevron-right"></i> Personal Loan Eligibility</a>
+              <a href="/pages/personal-loan-prepayment"><i class="fas fa-chevron-right"></i> Personal Loan Prepayment</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2>Personal Loan EMI — FAQs</h2>
+        <p>Common questions about personal loan EMI calculations answered.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            What is the EMI for a ₹5 lakh personal loan?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              For a ₹5 lakh personal loan at 12% interest rate for 3 years, your monthly EMI would be approximately ₹16,607. The exact EMI depends on the interest rate offered by your lender and the tenure you choose. Use the calculator above to check EMIs for your specific scenario.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Does changing the tenure affect my EMI significantly?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, tenure has a major impact on your EMI. For example, a ₹5 lakh loan at 12% costs ₹44,424/month for 1 year but only ₹11,122/month for 5 years. However, a longer tenure means more total interest — you'd pay ₹32,293 in interest for 1 year versus ₹1,67,334 for 5 years. Choose a tenure that balances affordability with total cost.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I reduce my EMI after taking the loan?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, you can reduce your EMI by making a part-prepayment which lowers the outstanding principal, or by requesting a tenure extension from your lender. Another option is a balance transfer to a lender offering a lower interest rate, which automatically reduces your EMI for the remaining tenure.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is the EMI calculator result the same as the actual bank EMI?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              The calculator provides a very close estimate based on the standard financial formula. The actual EMI from your bank may differ slightly due to processing fees, insurance charges, or rounding differences. However, for planning purposes, the calculator result is highly reliable and typically within ₹50-100 of the actual figure.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens if I miss an EMI payment?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Missing an EMI payment can result in a late payment fee (typically ₹500-1,000 + GST), a negative mark on your CIBIL report, and penal interest on the overdue amount. Repeated defaults can lead to legal recovery action and a significant drop in your credit score. If you foresee difficulty in paying, contact your lender proactively to discuss restructuring options.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page CTA -->
+  <section class="page-content" style="padding-top:0;">
+    <div class="container">
+      <div class="page-cta">
+        <div>
+          <h3>Ready to Apply for a Personal Loan?</h3>
+          <p>Compare EMIs from 50+ lenders and get instant approval at the best rates starting at 9.98% p.a.</p>
+        </div>
+        <a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">
+          Apply Now <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+</BaseLayout>

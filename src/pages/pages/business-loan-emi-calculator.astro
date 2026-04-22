@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Business Loan EMI Calculator | TrueCred Loan Expert">
+
+<!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>Business Loan EMI Calculator</span></div>
+      <h1>Business Loan EMI Calculator</h1>
+      <p class="hero-sub">Plan your business expansion with clarity. Calculate monthly EMIs for term loans and working capital, compare lender rates, and make confident borrowing decisions.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-bolt"></i> <span>Calculation: Instant</span></div>
+        <div class="highlight-item"><i class="fas fa-briefcase"></i> <span>Loans up to ₹50 Lakh</span></div>
+        <div class="highlight-item"><i class="fas fa-percent"></i> <span>Rates from 14% p.a.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>What is a Business Loan EMI?</h2>
+          <p>A business loan EMI is the fixed monthly instalment you pay to repay a business loan. Whether you've borrowed for inventory purchase, equipment acquisition, office expansion, or working capital needs, the EMI remains constant throughout the tenure, making it easy to plan your cash flows.</p>
+          <p>Business loans in India are available as both secured (backed by collateral) and unsecured options. Unsecured business loans typically carry higher interest rates (14-24% p.a.) but require no collateral, while secured loans offer lower rates. Our calculator works for both types — simply enter the applicable rate to see your EMI.</p>
+
+          <h3>How is Business Loan EMI Calculated?</h3>
+          <p>The EMI formula is the same standard reducing-balance method: EMI = [P × r × (1+r)^n] / [(1+r)^n – 1]. For business loans, the key difference is typically higher interest rates and shorter tenures (1-5 years) compared to home loans. This means a larger portion of each EMI goes toward interest in the early months.</p>
+          <p>For working capital loans with flexible repayment, the calculator gives a baseline estimate assuming standard EMI structure. Some lenders offer step-up EMIs or seasonal repayment options for businesses with cyclical revenue.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-briefcase" style="color: var(--primary); margin-right: 8px;"></i> Business Loan EMI Calculator</h3>
+            <div class="calc-form-group">
+              <label for="loanAmount">Loan Amount: <strong id="loanAmountDisplay">₹10,00,000</strong></label>
+              <input type="range" id="loanAmount" min="100000" max="5000000" value="1000000" step="50000">
+              <div class="calc-range-labels"><span>₹1,00,000</span><span>₹50,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="interestRateDisplay">16%</strong></label>
+              <input type="range" id="interestRate" min="14" max="28" value="16" step="0.5">
+              <div class="calc-range-labels"><span>14%</span><span>28%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="loanTenure">Loan Tenure (Years): <strong id="loanTenureDisplay">3 Years</strong></label>
+              <input type="range" id="loanTenure" min="1" max="5" value="3" step="1">
+              <div class="calc-range-labels"><span>1 Year</span><span>5 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Monthly EMI</span><span class="calc-value" id="emiResult">₹35,157</span></div>
+              <div class="calc-result-item"><span class="calc-label">Total Interest</span><span class="calc-value" id="totalInterest">₹2,65,642</span></div>
+              <div class="calc-result-item"><span class="calc-label">Total Amount</span><span class="calc-value" id="totalAmount">₹12,65,642</span></div>
+            </div>
+          </div>
+
+          <h3>Example Calculation</h3>
+          <p>For a business loan of <strong>₹10,00,000</strong> at <strong>16% p.a.</strong> for <strong>3 years</strong>:</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> Monthly EMI = ₹35,157</li>
+            <li><i class="fas fa-circle-check"></i> Total Interest Payable = ₹2,65,642</li>
+            <li><i class="fas fa-circle-check"></i> Total Amount Payable = ₹12,65,642</li>
+          </ul>
+          <p>Your business needs to generate sufficient surplus above operating expenses to comfortably cover this EMI of ₹35,157 per month.</p>
+
+          <h3>Business Loan EMI Comparison</h3>
+          <table class="rate-table">
+            <thead><tr><th>Loan Amount</th><th>Rate</th><th>Tenure</th><th>Monthly EMI</th><th>Total Interest</th></tr></thead>
+            <tbody>
+              <tr><td>₹5,00,000</td><td>15%</td><td>2 Years</td><td>₹24,244</td><td>₹81,852</td></tr>
+              <tr><td>₹10,00,000</td><td>16%</td><td>3 Years</td><td>₹35,157</td><td>₹2,65,642</td></tr>
+              <tr><td>₹20,00,000</td><td>14%</td><td>4 Years</td><td>₹54,639</td><td>₹6,22,682</td></tr>
+              <tr><td>₹30,00,000</td><td>15%</td><td>5 Years</td><td>₹71,369</td><td>₹12,82,138</td></tr>
+              <tr><td>₹50,00,000</td><td>14%</td><td>5 Years</td><td>₹1,16,346</td><td>₹19,80,760</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Business Loan EMI Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Cash Flow Planning</strong> — Ensure your business revenue can comfortably cover EMI payments</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Compare Loan Types</strong> — Evaluate term loans vs working capital loans by their EMI impact</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Multiple Scenarios</strong> — Test different amounts and tenures to find the right borrowing strategy</li>
+            <li><i class="fas fa-circle-check"></i> <strong>ROI Analysis</strong> — Compare your EMI cost against expected returns from business investment</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Lender Comparison</strong> — See how rates from different NBFCs and banks affect your monthly outflow</li>
+            <li><i class="fas fa-circle-check"></i> <strong>No Registration</strong> — Calculate freely without creating an account or sharing business details</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Loan Amount</h4><p>Set the business loan amount you need — from ₹1 lakh for working capital to ₹50 lakhs for expansion.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Set Interest Rate</h4><p>Enter the rate quoted by your lender. Unsecured business loans range from 14-28% p.a. based on profile.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Choose Tenure</h4><p>Select 1-5 years. Shorter tenure means higher EMI but significantly less total interest.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>Analyze Results</h4><p>Review your EMI against monthly business surplus to ensure comfortable repayment capacity.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Apply for Business Loan</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Loan Amount</option>
+                  <option value="100000">₹1,00,000</option>
+                  <option value="300000">₹3,00,000</option>
+                  <option value="500000">₹5,00,000</option>
+                  <option value="1000000">₹10,00,000</option>
+                  <option value="2000000">₹20,00,000</option>
+                  <option value="3000000">₹30,00,000</option>
+                  <option value="5000000">₹50,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Check Offers <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+              <a href="/pages/gold-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Gold Loan EMI</a>
+              <a href="/pages/personal-loan-eligibility"><i class="fas fa-chevron-right"></i> Personal Loan Eligibility</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>Business Loan EMI — FAQs</h2><p>Common questions about business loan EMI calculations.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">What is the minimum turnover required for a business loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Most lenders require a minimum annual turnover of ₹10-15 lakhs for unsecured business loans. However, some fintech lenders on our platform offer loans to businesses with turnover as low as ₹5 lakhs. Higher turnover generally qualifies you for larger loan amounts and better interest rates.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I get a business loan without collateral?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, unsecured business loans up to ₹50 lakhs are available without collateral from many banks and NBFCs. These loans are approved based on your business financials, GST returns, bank statements, and credit score. Interest rates for unsecured loans are typically 2-4% higher than secured options.</div></div></div>
+        <div class="faq-item"><button class="faq-question">How does GST filing affect business loan eligibility?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Regular GST filing is now a key criterion for business loan approval. Lenders use your GST returns to verify revenue and assess repayment capacity. Businesses with consistent GST filing history of 12+ months often get faster approvals and better rates. Irregular filing can lead to rejection.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the difference between a term loan and working capital loan EMI?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">A term loan has fixed monthly EMIs for the entire tenure, ideal for one-time investments like equipment or expansion. Working capital loans may have flexible repayment structures — some use overdraft facilities where you pay interest only on the utilized amount, while others have standard EMIs. The calculator above computes standard EMI-based repayment.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I prepay my business loan to save on interest?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, most lenders allow prepayment after a lock-in period of 3-6 months. Prepayment charges typically range from 2-4% of the outstanding amount. Some NBFCs offer zero prepayment charges after 12 months. Prepaying even a small amount can significantly reduce your total interest outflow, especially in the early years of the loan.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page CTA -->
+  <section class="page-content" style="padding-top:0;">
+    <div class="container">
+      <div class="page-cta">
+        <div><h3>Grow Your Business with the Right Loan</h3><p>Compare business loan offers from 40+ lenders and get approval in 24 hours.</p></div>
+        <a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Apply Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+</BaseLayout>

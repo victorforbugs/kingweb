@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Mutual Fund Calculator — Lump Sum & SIP Returns | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>Mutual Fund Calculator</span></div>
+      <h1>Mutual Fund Calculator</h1>
+      <p class="hero-sub">Calculate your mutual fund lump sum returns. See how a one-time investment grows over time through the power of compounding and compare it with SIP investing.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-chart-line"></i> <span>Lump Sum Returns</span></div>
+        <div class="highlight-item"><i class="fas fa-scale-balanced"></i> <span>SIP vs Lump Sum</span></div>
+        <div class="highlight-item"><i class="fas fa-chart-pie"></i> <span>10-15% Expected CAGR</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>What is Lump Sum Mutual Fund Investment?</h2>
+          <p>A lump sum mutual fund investment is when you invest a large amount at once into a mutual fund scheme, as opposed to spreading it over monthly SIPs. Lump sum investing works best when you have a surplus amount — such as a bonus, inheritance, or matured FD — and want to deploy it for long-term wealth creation.</p>
+          <p>When invested in equity mutual funds for 7-10+ years, lump sum investments have historically generated 10-15% CAGR returns. The key advantage of lump sum over SIP is that your entire capital starts compounding from day one. However, lump sum carries higher timing risk if invested at market peaks.</p>
+
+          <h3>How is Lump Sum Return Calculated?</h3>
+          <p>Lump sum returns follow simple compound interest: Future Value = P × (1 + r)^t, where P is the invested amount, r is the annual return rate, and t is the holding period in years. Unlike SIP where each instalment compounds separately, lump sum gives the full principal the maximum compounding time.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-chart-pie" style="color: var(--primary); margin-right: 8px;"></i> Mutual Fund Lump Sum Calculator</h3>
+            <div class="calc-form-group">
+              <label for="investAmount">Investment Amount: <strong id="investDisplay">₹5,00,000</strong></label>
+              <input type="range" id="investAmount" min="10000" max="10000000" value="500000" step="10000">
+              <div class="calc-range-labels"><span>₹10,000</span><span>₹1,00,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="expectedReturn">Expected Return (% p.a.): <strong id="returnDisplay">12%</strong></label>
+              <input type="range" id="expectedReturn" min="6" max="20" value="12" step="0.5">
+              <div class="calc-range-labels"><span>6%</span><span>20%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="holdingPeriod">Holding Period (Years): <strong id="periodDisplay">10 Years</strong></label>
+              <input type="range" id="holdingPeriod" min="1" max="30" value="10" step="1">
+              <div class="calc-range-labels"><span>1 Year</span><span>30 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Future Value</span><span class="calc-value" id="futureValue">₹15,52,924</span></div>
+              <div class="calc-result-item"><span class="calc-label">Wealth Gained</span><span class="calc-value" id="wealthGained">₹10,52,924</span></div>
+              <div class="calc-result-item"><span class="calc-label">Growth Multiple</span><span class="calc-value" id="growthMultiple">3.1x</span></div>
+            </div>
+          </div>
+
+          <h3>Lump Sum vs SIP Comparison</h3>
+          <table class="rate-table">
+            <thead><tr><th>Investment</th><th>Method</th><th>Period</th><th>Total Invested</th><th>Value @12%</th></tr></thead>
+            <tbody>
+              <tr><td>₹5,00,000</td><td>Lump Sum (Day 1)</td><td>10 Years</td><td>₹5,00,000</td><td>₹15,52,924</td></tr>
+              <tr><td>₹4,167/mo</td><td>SIP (120 months)</td><td>10 Years</td><td>₹5,00,040</td><td>₹9,66,953</td></tr>
+              <tr><td>₹10,00,000</td><td>Lump Sum (Day 1)</td><td>15 Years</td><td>₹10,00,000</td><td>₹54,73,566</td></tr>
+              <tr><td>₹5,556/mo</td><td>SIP (180 months)</td><td>15 Years</td><td>₹10,00,080</td><td>₹28,09,270</td></tr>
+              <tr><td>₹5,00,000</td><td>Lump Sum (Day 1)</td><td>20 Years</td><td>₹5,00,000</td><td>₹48,23,145</td></tr>
+            </tbody>
+          </table>
+          <p><em>Lump sum outperforms SIP when markets trend upward. SIP provides protection during volatile or declining markets through rupee cost averaging.</em></p>
+
+          <h3>Why Use Our Mutual Fund Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Compounding Visualizer</strong> — See how your money multiplies 3x, 5x, or even 10x over different time horizons</li>
+            <li><i class="fas fa-circle-check"></i> <strong>SIP vs Lump Sum</strong> — Compare both strategies side-by-side for the same total investment</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Goal-Based Planning</strong> — Calculate the lump sum needed today to reach a future financial goal</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Category Comparison</strong> — Model returns for large-cap (10-12%), mid-cap (12-15%), and small-cap (14-18%)</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Tax-Adjusted Returns</strong> — Factor in LTCG tax to see your real post-tax wealth creation</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Instant & Free</strong> — No account needed, calculate as many scenarios as you want</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Investment Amount</h4><p>Set the one-time lump sum amount you plan to invest in mutual funds.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Set Expected Return</h4><p>Use 10-12% for large-cap, 12-15% for mid-cap, and 14-18% for small-cap as guidelines.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Choose Holding Period</h4><p>Longer holds unlock the full power of compounding. 10+ years is ideal for equity funds.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>View Returns</h4><p>See your future value, wealth gained, and the growth multiple on your investment.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Invest in Mutual Funds</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Investment Amount</option>
+                  <option value="25000">₹25,000</option>
+                  <option value="50000">₹50,000</option>
+                  <option value="100000">₹1,00,000</option>
+                  <option value="500000">₹5,00,000</option>
+                  <option value="1000000">₹10,00,000</option>
+                  <option value="2500000">₹25,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Get Started <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/nps-calculator"><i class="fas fa-chevron-right"></i> NPS Calculator</a>
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>Mutual Fund — FAQs</h2><p>Common questions about mutual fund lump sum investing.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">Is lump sum better than SIP for mutual funds?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Lump sum tends to outperform SIP in a rising market because the entire capital benefits from compounding from day one. However, SIP is safer in volatile markets due to rupee cost averaging. For most salaried investors, SIP is more practical. Lump sum is ideal when you have a windfall and the market is not at extreme highs.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the minimum amount for lump sum mutual fund investment?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Most mutual funds accept a minimum lump sum of ₹1,000-5,000. There's no maximum limit. For tax-saving ELSS funds, the minimum is typically ₹500. You can invest through your bank, AMC website, or mutual fund platforms. Multiple lump sum investments in the same fund are treated as separate purchases for tax purposes.</div></div></div>
+        <div class="faq-item"><button class="faq-question">How are mutual fund lump sum returns taxed?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">For equity mutual funds: gains on units held over 1 year are LTCG — tax-free up to ₹1.25 lakh/year, 12.5% beyond that. Short-term gains (under 1 year) are taxed at 20%. For debt funds: all gains are taxed at your income tax slab rate regardless of holding period (post April 2023 rules).</div></div></div>
+        <div class="faq-item"><button class="faq-question">Should I invest lump sum in equity or debt funds?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">For goals 5+ years away, equity funds offer the best growth potential (10-15% CAGR). For 1-3 year goals, debt or hybrid funds are safer (7-9% returns). If investing a large lump sum in equity, consider using a Systematic Transfer Plan (STP) — park in a liquid fund and transfer monthly to equity over 6-12 months to reduce timing risk.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I withdraw my lump sum mutual fund investment anytime?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, open-ended mutual funds allow withdrawal (redemption) on any business day. The amount is credited to your bank account within 1-3 days. However, equity funds may charge a 1% exit load if redeemed within 1 year. ELSS funds have a mandatory 3-year lock-in. There's no exit load after the specified period for most funds.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;"><div class="container"><div class="page-cta"><div><h3>Start Your Mutual Fund Journey</h3><p>Invest in top-rated mutual funds and watch your wealth grow with the power of compounding.</p></div><a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Invest Now <i class="fas fa-arrow-right"></i></a></div></div></section>
+
+</BaseLayout>

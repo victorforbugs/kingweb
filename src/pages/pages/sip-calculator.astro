@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="SIP Calculator — Systematic Investment Plan Returns | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>SIP Calculator</span></div>
+      <h1>SIP Calculator</h1>
+      <p class="hero-sub">See how small monthly investments can grow into a large corpus through the power of compounding. Calculate SIP returns and plan your wealth creation journey.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-chart-line"></i> <span>Power of Compounding</span></div>
+        <div class="highlight-item"><i class="fas fa-indian-rupee-sign"></i> <span>Start with ₹500/month</span></div>
+        <div class="highlight-item"><i class="fas fa-chart-pie"></i> <span>12-15% Expected Returns</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>What is SIP (Systematic Investment Plan)?</h2>
+          <p>SIP is a method of investing a fixed amount regularly (usually monthly) into mutual funds. Instead of investing a lump sum, SIP lets you build wealth gradually by investing small amounts consistently. The magic of SIP lies in two principles: rupee cost averaging (you buy more units when markets are low and fewer when high) and the power of compounding (your returns generate further returns over time).</p>
+          <p>Even a modest SIP of ₹5,000 per month at 12% returns can grow to over ₹50 lakhs in 20 years — where your total investment is only ₹12 lakhs. That's more than 4x growth through compounding alone.</p>
+
+          <h3>How is SIP Return Calculated?</h3>
+          <p>SIP returns use the future value of annuity formula: FV = P × [((1+r)^n – 1) / r] × (1+r), where P is the monthly SIP amount, r is the expected monthly rate of return (annual rate / 12 / 100), and n is the total number of months. This accounts for each monthly instalment growing at compound interest for its remaining investment duration.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-chart-line" style="color: var(--primary); margin-right: 8px;"></i> SIP Calculator</h3>
+            <div class="calc-form-group">
+              <label for="sipAmount">Monthly SIP Amount: <strong id="sipDisplay">₹10,000</strong></label>
+              <input type="range" id="sipAmount" min="500" max="200000" value="10000" step="500">
+              <div class="calc-range-labels"><span>₹500</span><span>₹2,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="expectedReturn">Expected Return (% p.a.): <strong id="returnDisplay">12%</strong></label>
+              <input type="range" id="expectedReturn" min="6" max="20" value="12" step="0.5">
+              <div class="calc-range-labels"><span>6%</span><span>20%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="sipTenure">Investment Period (Years): <strong id="tenureDisplay">10 Years</strong></label>
+              <input type="range" id="sipTenure" min="1" max="30" value="10" step="1">
+              <div class="calc-range-labels"><span>1 Year</span><span>30 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Total Wealth Created</span><span class="calc-value" id="totalWealth">₹23,23,391</span></div>
+              <div class="calc-result-item"><span class="calc-label">Amount Invested</span><span class="calc-value" id="totalInvested">₹12,00,000</span></div>
+              <div class="calc-result-item"><span class="calc-label">Wealth Gained</span><span class="calc-value" id="wealthGained">₹11,23,391</span></div>
+            </div>
+          </div>
+
+          <h3>SIP Growth Over Time</h3>
+          <table class="rate-table">
+            <thead><tr><th>Monthly SIP</th><th>Period</th><th>Invested</th><th>@12% Returns</th><th>Wealth Gain</th></tr></thead>
+            <tbody>
+              <tr><td>₹5,000</td><td>5 Years</td><td>₹3,00,000</td><td>₹4,12,432</td><td>₹1,12,432</td></tr>
+              <tr><td>₹5,000</td><td>10 Years</td><td>₹6,00,000</td><td>₹11,61,695</td><td>₹5,61,695</td></tr>
+              <tr><td>₹10,000</td><td>15 Years</td><td>₹18,00,000</td><td>₹50,45,760</td><td>₹32,45,760</td></tr>
+              <tr><td>₹10,000</td><td>20 Years</td><td>₹24,00,000</td><td>₹99,91,479</td><td>₹75,91,479</td></tr>
+              <tr><td>₹25,000</td><td>25 Years</td><td>₹75,00,000</td><td>₹4,69,83,952</td><td>₹3,94,83,952</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our SIP Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Visualize Compounding</strong> — See how small monthly investments snowball into crores over decades</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Goal-Based Planning</strong> — Calculate the SIP needed for child education, retirement, or home purchase</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Return Scenarios</strong> — Compare conservative (8%), moderate (12%), and aggressive (15%) return scenarios</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Rupee Cost Averaging</strong> — Understand how SIP reduces the impact of market volatility</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Step-Up SIP</strong> — Plan annual SIP increases aligned with salary growth for accelerated wealth</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Free & Instant</strong> — No sign-up required, calculate unlimited times</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Set SIP Amount</h4><p>Enter the amount you can invest monthly — start as low as ₹500 and increase over time.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Expected Return Rate</h4><p>Use 12% for equity funds, 8-10% for hybrid, and 6-7% for debt funds as a guideline.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Choose Duration</h4><p>Longer duration = dramatically higher returns due to compounding. Aim for 10+ years.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>See Your Wealth</h4><p>View total corpus, amount invested, and wealth gained. Start your SIP today!</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Start SIP Today</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Monthly SIP Amount</option>
+                  <option value="1000">₹1,000</option>
+                  <option value="2500">₹2,500</option>
+                  <option value="5000">₹5,000</option>
+                  <option value="10000">₹10,000</option>
+                  <option value="25000">₹25,000</option>
+                  <option value="50000">₹50,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Get Started <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/mutual-fund-calculator"><i class="fas fa-chevron-right"></i> Mutual Fund Calculator</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/nps-calculator"><i class="fas fa-chevron-right"></i> NPS Calculator</a>
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>SIP Calculator — FAQs</h2><p>Common questions about SIP investing.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">Is 12% return realistic for SIP?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Historically, equity mutual funds in India have delivered 12-15% CAGR over 10+ year periods. Large-cap funds average around 11-13%, while mid/small-cap funds have delivered 14-18%. However, returns are not guaranteed and depend on market conditions. For conservative planning, use 10-12% for equity SIPs.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I stop or pause my SIP?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, SIPs are flexible. You can pause, stop, or modify your SIP amount at any time without penalties. Most fund houses allow pausing for 1-3 months. You can also redeem your accumulated units partially or fully at any time (after any applicable exit load period, typically 1 year for equity funds).</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the minimum SIP amount?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Most mutual funds allow SIPs starting from ₹500 per month, and some even from ₹100. There's no maximum limit. The key is to start early and be consistent — even ₹500/month for 30 years at 12% grows to over ₹17.6 lakhs from just ₹1.8 lakhs invested.</div></div></div>
+        <div class="faq-item"><button class="faq-question">SIP vs lump sum — which is better?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">SIP is better for most investors because: (1) it doesn't require a large upfront amount, (2) rupee cost averaging reduces timing risk, (3) it builds investing discipline. Lump sum can be better if you have a large amount and markets are at a low point. For salaried individuals, SIP aligned with salary date is the most practical approach.</div></div></div>
+        <div class="faq-item"><button class="faq-question">How is SIP taxed?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Each SIP instalment is treated as a separate investment for tax purposes. For equity funds, gains on units held over 1 year are Long-Term Capital Gains (LTCG) — tax-free up to ₹1.25 lakh per year, and 12.5% beyond that. Short-term gains (under 1 year) are taxed at 20%. ELSS SIPs also offer ₹1.5 lakh deduction under Section 80C with a 3-year lock-in.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;"><div class="container"><div class="page-cta"><div><h3>Start Building Wealth Today</h3><p>Begin your SIP journey with as little as ₹500/month and watch compounding work its magic.</p></div><a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Start SIP <i class="fas fa-arrow-right"></i></a></div></div></section>
+
+</BaseLayout>

@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Gold Loan EMI Calculator | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>Gold Loan EMI Calculator</span></div>
+      <h1>Gold Loan EMI Calculator</h1>
+      <p class="hero-sub">Unlock the value of your gold jewellery. Calculate gold loan EMI, estimate how much loan you can get based on gold weight, and compare rates from top lenders.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-bolt"></i> <span>Calculation: Instant</span></div>
+        <div class="highlight-item"><i class="fas fa-coins"></i> <span>Up to 75% of Gold Value</span></div>
+        <div class="highlight-item"><i class="fas fa-percent"></i> <span>Rates from 7% p.a.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>What is a Gold Loan EMI?</h2>
+          <p>A gold loan is a secured loan where you pledge your gold jewellery or coins as collateral and receive funds from the lender. The gold loan EMI is the monthly instalment you pay to repay this loan. Since gold loans are secured, they come with significantly lower interest rates compared to personal or business loans — often starting from just 7% p.a.</p>
+          <p>Gold loans are popular for their quick disbursal (often within 30 minutes), minimal documentation, and no credit score requirement. Lenders typically offer up to 75% of the gold's market value as the loan amount, based on RBI guidelines.</p>
+
+          <h3>How is Gold Loan EMI Calculated?</h3>
+          <p>Gold loan EMI follows the same standard formula: EMI = [P × r × (1+r)^n] / [(1+r)^n – 1]. However, gold loans have unique repayment options — some lenders offer bullet repayment (pay interest monthly, repay principal at end), interest-only EMIs, or standard reducing-balance EMIs. Our calculator computes the standard EMI format.</p>
+          <p><strong>Gold value estimation:</strong> The loan amount depends on the weight and purity of your gold. At current market rates of approximately ₹7,200 per gram for 22-karat gold, you can get up to 75% of the value as a loan.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-coins" style="color: var(--primary); margin-right: 8px;"></i> Gold Loan EMI Calculator</h3>
+            <div class="calc-form-group">
+              <label for="loanAmount">Loan Amount: <strong id="loanAmountDisplay">₹3,00,000</strong></label>
+              <input type="range" id="loanAmount" min="25000" max="5000000" value="300000" step="25000">
+              <div class="calc-range-labels"><span>₹25,000</span><span>₹50,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="interestRateDisplay">9%</strong></label>
+              <input type="range" id="interestRate" min="7" max="18" value="9" step="0.25">
+              <div class="calc-range-labels"><span>7%</span><span>18%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="loanTenure">Loan Tenure (Months): <strong id="loanTenureDisplay">12 Months</strong></label>
+              <input type="range" id="loanTenure" min="3" max="36" value="12" step="1">
+              <div class="calc-range-labels"><span>3 Months</span><span>36 Months</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Monthly EMI</span><span class="calc-value" id="emiResult">₹26,233</span></div>
+              <div class="calc-result-item"><span class="calc-label">Total Interest</span><span class="calc-value" id="totalInterest">₹14,797</span></div>
+              <div class="calc-result-item"><span class="calc-label">Total Amount</span><span class="calc-value" id="totalAmount">₹3,14,797</span></div>
+            </div>
+          </div>
+
+          <h3>Example Calculation</h3>
+          <p>For a gold loan of <strong>₹3,00,000</strong> at <strong>9% p.a.</strong> for <strong>12 months</strong>:</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> Monthly EMI = ₹26,233</li>
+            <li><i class="fas fa-circle-check"></i> Total Interest = ₹14,797</li>
+            <li><i class="fas fa-circle-check"></i> Total Repayment = ₹3,14,797</li>
+          </ul>
+          <p>Compare this to a personal loan for the same amount at 14% — the gold loan saves you approximately ₹10,000 in interest over the same period.</p>
+
+          <h3>Gold Loan EMI Comparison</h3>
+          <table class="rate-table">
+            <thead><tr><th>Gold Weight</th><th>Approx. Loan</th><th>Rate</th><th>Tenure</th><th>Monthly EMI</th></tr></thead>
+            <tbody>
+              <tr><td>20 grams</td><td>₹1,08,000</td><td>8%</td><td>6 Months</td><td>₹18,381</td></tr>
+              <tr><td>50 grams</td><td>₹2,70,000</td><td>9%</td><td>12 Months</td><td>₹23,610</td></tr>
+              <tr><td>100 grams</td><td>₹5,40,000</td><td>8.5%</td><td>12 Months</td><td>₹47,027</td></tr>
+              <tr><td>150 grams</td><td>₹8,10,000</td><td>9%</td><td>24 Months</td><td>₹37,000</td></tr>
+              <tr><td>200 grams</td><td>₹10,80,000</td><td>7.5%</td><td>12 Months</td><td>₹93,605</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Gold Loan EMI Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Quick Gold Valuation</strong> — Estimate your loan eligibility based on gold weight and current market rates</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Lowest Rate Comparison</strong> — Compare EMIs across Muthoot, Manappuram, SBI, HDFC, and other gold loan providers</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Flexible Tenure Options</strong> — Model EMIs for short-term (3 months) to medium-term (36 months) needs</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Repayment Planning</strong> — Know your exact monthly outflow to plan for timely gold retrieval</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Interest Savings</strong> — See how prepayment or shorter tenure can significantly reduce interest cost</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Free to Use</strong> — No registration, no data sharing required — calculate unlimited times</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Loan Amount</h4><p>Set the loan amount based on the gold you plan to pledge. Lenders offer up to 75% of gold market value.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Set Interest Rate</h4><p>Enter the rate from your gold loan provider. Rates range from 7% (banks) to 18% (some NBFCs).</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Choose Tenure</h4><p>Gold loans typically have shorter tenures — 3 to 36 months. Choose based on your repayment capacity.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>Review EMI</h4><p>See your monthly EMI and total interest. Ensure timely payment to avoid gold auction by the lender.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Apply for Gold Loan</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Loan Amount</option>
+                  <option value="50000">₹50,000</option>
+                  <option value="100000">₹1,00,000</option>
+                  <option value="200000">₹2,00,000</option>
+                  <option value="300000">₹3,00,000</option>
+                  <option value="500000">₹5,00,000</option>
+                  <option value="1000000">₹10,00,000</option>
+                  <option value="2500000">₹25,00,000</option>
+                  <option value="5000000">₹50,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Check Offers <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+              <a href="/pages/business-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Business Loan EMI</a>
+              <a href="/pages/personal-loan-eligibility"><i class="fas fa-chevron-right"></i> Personal Loan Eligibility</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>Gold Loan EMI — FAQs</h2><p>Common questions about gold loan EMI and repayment.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">How much loan can I get per gram of gold?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Lenders offer up to 75% of your gold's market value per RBI guidelines. For 22-karat gold at current rates (~₹7,200/gram), you can get approximately ₹5,400 per gram. For 18-karat gold, the per-gram value is lower proportionally. The exact amount depends on the purity assessed by the lender.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What happens if I cannot repay my gold loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">If you default on your gold loan, the lender will send multiple reminders and a final notice. If you still don't repay, the lender has the legal right to auction your pledged gold to recover the outstanding amount. Any excess amount from the auction is returned to you. It's crucial to plan your repayment carefully to avoid losing your gold.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Is a gold loan better than a personal loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">For short-term needs, gold loans are often better — interest rates are 5-10% lower, disbursal is faster (30 minutes vs 2-48 hours), no credit score check is needed, and processing fees are minimal. The trade-off is that your gold is locked with the lender until full repayment. For amounts up to ₹25-50 lakhs where you have sufficient gold, it's typically the cheaper option.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I pay only interest and repay principal later?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, many gold loan providers offer a "bullet repayment" scheme where you pay only the interest monthly and repay the entire principal at the end of the tenure. Some also offer an option to pay both interest and principal together at maturity. This flexibility makes gold loans attractive for short-term cash needs.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What type of gold is accepted for gold loans?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Lenders accept gold jewellery (18-24 karat), gold coins issued by banks (up to 50 grams), and gold bars. Gold-plated or white gold items are generally not accepted. The gold must be hallmarked for the best valuation. Some lenders also accept gold with precious stones, but the stone weight is excluded from the valuation.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;">
+    <div class="container">
+      <div class="page-cta">
+        <div><h3>Get Instant Cash Against Your Gold</h3><p>Compare gold loan rates from top lenders and get disbursal in just 30 minutes.</p></div>
+        <a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Apply Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

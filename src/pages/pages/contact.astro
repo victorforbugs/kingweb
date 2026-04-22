@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact Us | TrueCred Loan Expert">
+
+<!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Contact Us</span>
+      </div>
+      <h1>Contact Us</h1>
+      <p class="hero-sub">We're here to help. Reach out to us through any of the channels below and our dedicated support team will assist you promptly.</p>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section class="page-content">
+    <div class="container">
+
+      <!-- Contact Grid -->
+      <div class="contact-grid">
+
+        <!-- Left Column: Contact Info Cards -->
+        <div>
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h4>Phone (Toll-Free)</h4>
+              <p><a href="tel:18002088877" style="color: var(--primary); font-weight: 600;">1800-208-8877</a></p>
+              <p>Available Mon - Sat, 9:30 AM - 6:30 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h4>Email Support</h4>
+              <p><a href="mailto:help@truecred.com" style="color: var(--primary); font-weight: 600;">help@truecred.com</a></p>
+              <p>We respond within 24 hours on business days</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div>
+              <h4>WhatsApp Support</h4>
+              <p><a href="#" style="color: var(--primary); font-weight: 600;">Chat on WhatsApp</a></p>
+              <p>Quick answers to your queries via WhatsApp chat</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <i class="fas fa-location-dot"></i>
+            </div>
+            <div>
+              <h4>Office Address</h4>
+              <p>TrueCred Loan Expert Pvt. Ltd.</p>
+              <p>Sector 44, Institutional Area, Gurugram, Haryana 122003, India</p>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div style="margin-top: 24px; padding: 24px; background: var(--primary-50); border-radius: var(--radius); border: 1px solid var(--primary-100);">
+            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--dark);"><i class="fas fa-clock" style="color: var(--primary); margin-right: 8px;"></i>Business Hours</h4>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--dark-600);">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Monday - Friday</span>
+                <strong>9:30 AM - 6:30 PM</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Saturday</span>
+                <strong>9:30 AM - 4:00 PM</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Sunday</span>
+                <strong style="color: var(--danger);">Closed</strong>
+              </div>
+              <p style="font-size: 0.82rem; color: var(--gray-500); margin-top: 8px; margin-bottom: 0;">* Customer care is available on all working days. Response times may vary during public holidays.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="contact-form">
+          <h3><i class="fas fa-paper-plane" style="color: var(--primary); margin-right: 8px;"></i>Send Us a Message</h3>
+          <form onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="First Name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-input" placeholder="Last Name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="email" class="form-input" placeholder="Email Address" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-input" placeholder="Phone Number" maxlength="10">
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 14px;">
+              <input type="text" class="form-input" placeholder="Subject">
+            </div>
+            <div class="form-group" style="margin-bottom: 14px;">
+              <textarea class="form-input" placeholder="Your Message" rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block btn-lg">
+              Submit Message <i class="fas fa-arrow-right"></i>
+            </button>
+            <p style="text-align: center; font-size: 0.78rem; color: var(--gray-400); margin-top: 12px;">
+              <i class="fas fa-lock" style="color: var(--success);"></i> Your information is 100% safe and secure with us.
+            </p>
+          </form>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQs</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common queries about contacting and getting support from TrueCred.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            How can I reach TrueCred customer support?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              You can reach us through multiple channels: call our toll-free number 1800-208-8877 (Mon-Sat, 9:30 AM - 6:30 PM), email us at help@truecred.com, chat with us on WhatsApp, or fill out the contact form on this page. Our dedicated support team typically responds within a few hours on business days.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What are the customer care working hours?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our customer care team is available Monday to Friday from 9:30 AM to 6:30 PM, and Saturday from 9:30 AM to 4:00 PM. We are closed on Sundays and public holidays. For urgent queries outside business hours, you can send us an email or WhatsApp message, and we'll respond as soon as we're back.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to get a response?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Phone calls are answered immediately during working hours. Email queries are typically resolved within 24 hours on business days. WhatsApp messages receive a response within a few hours. For complex queries that require investigation, our team will keep you updated on the progress and expected resolution time.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            I have a complaint about my loan application. How do I escalate?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              If you have a complaint, first contact our support team via phone or email with your application reference number. If the issue is not resolved within 48 hours, you can escalate by emailing escalations@truecred.com with your complaint details and previous reference number. Our senior support team will prioritize your case and ensure resolution.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I visit your office in person?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, you are welcome to visit our office at Sector 44, Institutional Area, Gurugram, Haryana 122003 during business hours. However, we recommend scheduling an appointment beforehand by calling our toll-free number or sending an email so that our team can be prepared to assist you with your specific needs.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+</BaseLayout>

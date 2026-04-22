@@ -1,0 +1,20 @@
+# Build output
+dist/
+
+# Dependencies
+node_modules/
+
+# Old pre-migration HTML files (no longer needed)
+/pages/
+/index.html
+/style.css
+/script.js
+/data/
+
+# Environment
+.env
+.env.*
+.DS_Store
+
+# Astro
+.astro/

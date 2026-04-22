@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="FD Calculator — Fixed Deposit Returns | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>FD Calculator</span></div>
+      <h1>FD Calculator</h1>
+      <p class="hero-sub">Calculate your Fixed Deposit maturity amount and interest earned. Compare FD rates from top banks and plan your risk-free investment with guaranteed returns.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-lock"></i> <span>Guaranteed Returns</span></div>
+        <div class="highlight-item"><i class="fas fa-building-columns"></i> <span>Compare 30+ Banks</span></div>
+        <div class="highlight-item"><i class="fas fa-percent"></i> <span>Up to 8.50% p.a.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>What is a Fixed Deposit (FD)?</h2>
+          <p>A Fixed Deposit is a financial instrument offered by banks and NBFCs where you invest a lump sum for a predetermined period at a fixed interest rate. FDs are one of the safest investment options in India, offering guaranteed returns unaffected by market fluctuations. They are ideal for conservative investors, emergency fund parking, and senior citizens looking for regular income.</p>
+          <p>FD interest rates currently range from 6.5% to 8.50% p.a. depending on the bank and tenure. Senior citizens typically receive an additional 0.25-0.50% p.a. FDs also qualify for tax-saving under Section 80C (5-year lock-in tax-saver FDs).</p>
+
+          <h3>How is FD Maturity Calculated?</h3>
+          <p>FD returns are calculated using compound interest, typically compounded quarterly. The formula is: Maturity Amount = P × (1 + r/n)^(n×t), where P is the principal, r is the annual interest rate, n is the compounding frequency (4 for quarterly), and t is the tenure in years. The interest earned is simply Maturity Amount minus the Principal.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-piggy-bank" style="color: var(--primary); margin-right: 8px;"></i> FD Calculator</h3>
+            <div class="calc-form-group">
+              <label for="depositAmount">Deposit Amount: <strong id="depositDisplay">₹5,00,000</strong></label>
+              <input type="range" id="depositAmount" min="10000" max="10000000" value="500000" step="10000">
+              <div class="calc-range-labels"><span>₹10,000</span><span>₹1,00,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="rateDisplay">7.25%</strong></label>
+              <input type="range" id="interestRate" min="5" max="9" value="7.25" step="0.05">
+              <div class="calc-range-labels"><span>5%</span><span>9%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="tenure">Tenure (Years): <strong id="tenureDisplay">3 Years</strong></label>
+              <input type="range" id="tenure" min="1" max="10" value="3" step="1">
+              <div class="calc-range-labels"><span>1 Year</span><span>10 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Maturity Amount</span><span class="calc-value" id="maturityAmount">₹6,20,118</span></div>
+              <div class="calc-result-item"><span class="calc-label">Interest Earned</span><span class="calc-value" id="interestEarned">₹1,20,118</span></div>
+              <div class="calc-result-item"><span class="calc-label">Effective Yield</span><span class="calc-value" id="effectiveYield">7.45%</span></div>
+            </div>
+          </div>
+
+          <h3>FD Rate Comparison — April 2026</h3>
+          <table class="rate-table">
+            <thead><tr><th>Bank</th><th>1 Year</th><th>3 Years</th><th>5 Years</th><th>Senior Citizen (5Y)</th></tr></thead>
+            <tbody>
+              <tr><td>SBI</td><td>6.80%</td><td>7.00%</td><td>6.50%</td><td>7.00%</td></tr>
+              <tr><td>HDFC Bank</td><td>6.60%</td><td>7.10%</td><td>7.00%</td><td>7.50%</td></tr>
+              <tr><td>ICICI Bank</td><td>6.70%</td><td>7.10%</td><td>7.00%</td><td>7.50%</td></tr>
+              <tr><td>Bajaj Finance</td><td>7.40%</td><td>7.90%</td><td>7.75%</td><td>8.25%</td></tr>
+              <tr><td>Post Office</td><td>6.90%</td><td>7.00%</td><td>7.50%</td><td>7.50%</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our FD Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Accurate Compounding</strong> — Calculates quarterly compounding as used by most banks</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Rate Comparison</strong> — Compare FD rates across SBI, HDFC, ICICI, Bajaj Finance, and more</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Tax Planning</strong> — Understand TDS impact and 80C benefit on 5-year tax-saver FDs</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Senior Citizen Rates</strong> — Check additional 0.25-0.50% benefit for senior citizens</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Goal Planning</strong> — Calculate how much to invest today to reach a target amount by a future date</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Free & Instant</strong> — No registration needed, use unlimited times</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Deposit Amount</h4><p>Set the lump sum you want to invest in the FD — from ₹10,000 to ₹1 Crore.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Set Interest Rate</h4><p>Enter the FD rate offered by your chosen bank. Check the comparison table above for current rates.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Choose Tenure</h4><p>Select 1 to 10 years. Longer tenures don't always mean higher rates — check the sweet spot.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>View Returns</h4><p>See your maturity amount, interest earned, and effective annual yield with quarterly compounding.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Invest in FD</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Investment Amount</option>
+                  <option value="25000">₹25,000</option>
+                  <option value="50000">₹50,000</option>
+                  <option value="100000">₹1,00,000</option>
+                  <option value="500000">₹5,00,000</option>
+                  <option value="1000000">₹10,00,000</option>
+                  <option value="2500000">₹25,00,000</option>
+                  <option value="5000000">₹50,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Compare FD Rates <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+              <a href="/pages/nps-calculator"><i class="fas fa-chevron-right"></i> NPS Calculator</a>
+              <a href="/pages/mutual-fund-calculator"><i class="fas fa-chevron-right"></i> Mutual Fund Calculator</a>
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>FD Calculator — FAQs</h2><p>Common questions about Fixed Deposits.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">Is FD interest taxable?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, FD interest is fully taxable as per your income tax slab. Banks deduct TDS at 10% if your annual FD interest exceeds ₹40,000 (₹50,000 for senior citizens). You can submit Form 15G/15H to avoid TDS if your total income is below the taxable limit. The interest must be reported in your ITR regardless of TDS.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the penalty for premature FD withdrawal?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Most banks charge a penalty of 0.5-1% on the applicable interest rate for premature withdrawal. For example, if you booked a 3-year FD at 7.25% but withdraw after 1 year, you'd get the 1-year FD rate minus the penalty. Some banks like SBI charge no penalty for FDs below ₹5 lakhs. Tax-saver FDs (5-year) cannot be withdrawn prematurely.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Are FDs safe? What if the bank fails?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">FDs with banks are insured by DICGC (Deposit Insurance and Credit Guarantee Corporation) up to ₹5 lakhs per depositor per bank — covering both principal and interest. For amounts above ₹5 lakhs, choose PSU banks or highly rated private banks. NBFC FDs are not covered by DICGC but offer higher rates to compensate for the additional risk.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the best FD tenure for maximum returns?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Currently, most banks offer the best FD rates for 2-3 year tenures (7-7.90%). Very short (under 1 year) and very long (above 5 years) tenures often have lower rates. Compare rates for your preferred tenure before investing. Also consider laddering — splitting your investment across multiple FDs with different maturities for both liquidity and optimal returns.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Should I invest in FD or mutual funds?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">FDs offer guaranteed returns with zero risk, ideal for short-term goals (1-3 years) and emergency funds. Mutual funds offer potentially higher returns (10-15% p.a.) but with market risk, making them better for long-term goals (5+ years). A balanced approach is recommended — use FDs for stability and mutual fund SIPs for wealth creation.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;"><div class="container"><div class="page-cta"><div><h3>Get the Best FD Rates</h3><p>Compare Fixed Deposit rates from 30+ banks and invest for guaranteed, risk-free returns.</p></div><a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Compare Now <i class="fas fa-arrow-right"></i></a></div></div></section>
+
+</BaseLayout>

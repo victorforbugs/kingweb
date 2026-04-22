@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Personal Loan Prepayment Calculator | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>Personal Loan Prepayment Calculator</span></div>
+      <h1>Personal Loan Prepayment Calculator</h1>
+      <p class="hero-sub">Calculate how much you save by prepaying your personal loan early. Understand foreclosure charges, interest savings, and the best prepayment strategy for your loan.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-piggy-bank"></i> <span>Save on Interest</span></div>
+        <div class="highlight-item"><i class="fas fa-calendar-minus"></i> <span>Reduce Tenure</span></div>
+        <div class="highlight-item"><i class="fas fa-receipt"></i> <span>Foreclosure Estimate</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>Should You Prepay Your Personal Loan?</h2>
+          <p>Personal loans carry some of the highest interest rates among retail loans (10-24% p.a.). Prepaying your personal loan — either partially or in full (foreclosure) — can save you a significant amount in interest. However, unlike home loans, personal loans may have prepayment or foreclosure charges ranging from 2-5% of the outstanding principal.</p>
+          <p>The key question is: do your interest savings outweigh the foreclosure charges? Our calculator helps you answer exactly that by computing net savings after accounting for any prepayment penalties.</p>
+
+          <h3>How Prepayment Savings Work</h3>
+          <p>When you prepay part of your personal loan, the outstanding principal decreases. Keeping your EMI the same means the loan gets repaid faster. The net saving is the interest you avoid minus any foreclosure charge the lender may levy. For loans with floating rates, RBI mandates zero foreclosure charges, but most personal loans are fixed-rate.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-piggy-bank" style="color: var(--primary); margin-right: 8px;"></i> Personal Loan Prepayment Calculator</h3>
+            <div class="calc-form-group">
+              <label for="outstandingLoan">Outstanding Loan: <strong id="loanDisplay">₹3,00,000</strong></label>
+              <input type="range" id="outstandingLoan" min="25000" max="4000000" value="300000" step="25000">
+              <div class="calc-range-labels"><span>₹25,000</span><span>₹40,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="rateDisplay">14%</strong></label>
+              <input type="range" id="interestRate" min="9" max="24" value="14" step="0.5">
+              <div class="calc-range-labels"><span>9%</span><span>24%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="remainingTenure">Remaining Tenure (Months): <strong id="tenureDisplay">24 Months</strong></label>
+              <input type="range" id="remainingTenure" min="3" max="60" value="24" step="1">
+              <div class="calc-range-labels"><span>3 Months</span><span>60 Months</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="prepayAmount">Prepayment Amount: <strong id="prepayDisplay">₹1,00,000</strong></label>
+              <input type="range" id="prepayAmount" min="10000" max="4000000" value="100000" step="10000">
+              <div class="calc-range-labels"><span>₹10,000</span><span>₹40,00,000</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Interest Saved</span><span class="calc-value" id="interestSaved">₹18,547</span></div>
+              <div class="calc-result-item"><span class="calc-label">Tenure Reduced</span><span class="calc-value" id="tenureReduced">7 Months</span></div>
+              <div class="calc-result-item"><span class="calc-label">Foreclosure Fee (4%)</span><span class="calc-value" id="foreclosureFee">₹4,000</span></div>
+            </div>
+          </div>
+
+          <h3>Foreclosure Charges by Lender</h3>
+          <table class="rate-table">
+            <thead><tr><th>Lender Type</th><th>Lock-in Period</th><th>Part Prepayment</th><th>Full Foreclosure</th></tr></thead>
+            <tbody>
+              <tr><td>SBI / PSU Banks</td><td>6 months</td><td>Nil (floating)</td><td>3% (fixed rate)</td></tr>
+              <tr><td>HDFC / ICICI Bank</td><td>12 months</td><td>2% + GST</td><td>4% + GST</td></tr>
+              <tr><td>Bajaj Finserv</td><td>12 months</td><td>2% + GST</td><td>4% + GST</td></tr>
+              <tr><td>Tata Capital</td><td>6 months</td><td>3% + GST</td><td>5% + GST</td></tr>
+              <tr><td>Digital Lenders</td><td>3-6 months</td><td>2-4% + GST</td><td>3-5% + GST</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Prepayment Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Net Savings Estimate</strong> — See actual savings after deducting foreclosure charges</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Break-Even Analysis</strong> — Know the minimum prepayment that outweighs the penalty cost</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Tenure Reduction</strong> — Visualize how many months you can shave off your loan</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Lender Charge Info</strong> — Compare foreclosure charges across major banks and NBFCs</li>
+            <li><i class="fas fa-circle-check"></i> <strong>CIBIL Benefit</strong> — Early closure improves your debt-to-income ratio and credit profile</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Free Planning Tool</strong> — No sign-up needed, calculate as many scenarios as you want</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Outstanding Loan</h4><p>Check your loan app or statement for the current outstanding principal amount.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Set Rate & Tenure</h4><p>Enter your loan's interest rate and the remaining months left on your loan tenure.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Enter Prepayment</h4><p>Set the amount you plan to prepay from your bonus, savings, or other surplus funds.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>Compare Savings</h4><p>Check interest saved vs foreclosure charges. If savings exceed charges, prepay!</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Balance Transfer</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Outstanding Loan</option>
+                  <option value="50000">₹50,000</option>
+                  <option value="100000">₹1,00,000</option>
+                  <option value="200000">₹2,00,000</option>
+                  <option value="300000">₹3,00,000</option>
+                  <option value="500000">₹5,00,000</option>
+                  <option value="1000000">₹10,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Get Lower Rate <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/personal-loan-eligibility"><i class="fas fa-chevron-right"></i> Personal Loan Eligibility</a>
+              <a href="/pages/home-loan-prepayment"><i class="fas fa-chevron-right"></i> Home Loan Prepayment</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>Prepayment — FAQs</h2><p>Common questions about personal loan prepayment and foreclosure.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">What is the typical foreclosure charge on a personal loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Most banks and NBFCs charge 2-5% of the outstanding principal amount + GST as foreclosure fee. This applies after the lock-in period (typically 6-12 months). Some lenders like SBI charge nil foreclosure fees on floating-rate personal loans per RBI guidelines. Always check your loan agreement for the exact charges.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Is it worth prepaying a personal loan with high foreclosure charges?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">It depends on the math. If your remaining interest liability exceeds the foreclosure charge, prepayment is beneficial. For example, on a ₹5 lakh loan at 14% with 2 years remaining, your pending interest is ~₹75,000. Even with a 4% foreclosure charge (₹20,000), you save ~₹55,000. Use our calculator to compare for your specific situation.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I make partial prepayment on my personal loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, most lenders allow partial prepayment — typically in multiples of an EMI amount or a minimum of ₹10,000-25,000. Part prepayment charges are usually the same percentage as full foreclosure. Some lenders allow one free partial prepayment per year. Check your lender's specific policy.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Does prepaying a personal loan improve my CIBIL score?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, prepaying a personal loan improves your credit profile by reducing your debt-to-income ratio and showing responsible credit behavior. Your CIBIL report will reflect the loan as "closed" which is positive. However, closing a loan too early (within 1-2 months) without making several EMI payments may not contribute as positively as a loan with a regular repayment track record.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What documents do I need for personal loan foreclosure?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">To foreclose a personal loan, you typically need: (1) Foreclosure request letter or form, (2) Outstanding balance statement from the lender, (3) Payment of the outstanding amount + foreclosure charges. After closure, collect the NOC (No Objection Certificate) and loan closure letter from the lender. Keep these documents safe for your records and future loan applications.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;"><div class="container"><div class="page-cta"><div><h3>Lower Your Personal Loan Interest</h3><p>Consider a balance transfer to save on interest — compare rates from 50+ lenders.</p></div><a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Compare Now <i class="fas fa-arrow-right"></i></a></div></div></section>
+
+</BaseLayout>

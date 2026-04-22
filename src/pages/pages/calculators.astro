@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Financial Calculators | TrueCred Loan Expert">
+
+<!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Calculators</span>
+      </div>
+      <h1>Financial Calculators</h1>
+      <p class="hero-sub">Plan your finances smartly with our easy-to-use EMI, eligibility, and investment calculators. Make informed decisions backed by accurate calculations.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <i class="fas fa-calculator"></i> EMI Calculator
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-clipboard-check"></i> Eligibility Check
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-chart-pie"></i> Investment Planner
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section class="page-content">
+    <div class="container">
+
+      <!-- EMI Calculator Widget -->
+      <div class="calculator-widget" id="emiCalculator">
+        <h3><i class="fas fa-calculator" style="color: var(--primary); margin-right: 8px;"></i> Loan EMI Calculator</h3>
+
+        <div class="calc-form-group">
+          <label for="loanAmount">Loan Amount: <strong id="loanAmountDisplay">₹10,00,000</strong></label>
+          <input type="range" id="loanAmount" min="100000" max="10000000" value="1000000" step="50000">
+          <div class="calc-range-labels">
+            <span>₹1 Lakh</span>
+            <span>₹1 Crore</span>
+          </div>
+        </div>
+
+        <div class="calc-form-group">
+          <label for="interestRate">Interest Rate (% p.a.): <strong id="interestRateDisplay">12%</strong></label>
+          <input type="range" id="interestRate" min="8" max="24" value="12" step="0.25">
+          <div class="calc-range-labels">
+            <span>8%</span>
+            <span>24%</span>
+          </div>
+        </div>
+
+        <div class="calc-form-group">
+          <label for="loanTenure">Loan Tenure (Years): <strong id="loanTenureDisplay">5 Years</strong></label>
+          <input type="range" id="loanTenure" min="1" max="30" value="5" step="1">
+          <div class="calc-range-labels">
+            <span>1 Year</span>
+            <span>30 Years</span>
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <div class="result-label">Monthly EMI</div>
+          <div class="result-value" id="emiResult">₹22,244</div>
+          <div class="calc-result-grid">
+            <div class="info-box">
+              <span class="info-value" id="totalInterest">₹3,34,667</span>
+              <span class="info-label">Total Interest</span>
+            </div>
+            <div class="info-box">
+              <span class="info-value" id="totalAmount">₹13,34,667</span>
+              <span class="info-label">Total Amount</span>
+            </div>
+            <div class="info-box">
+              <span class="info-value" id="principalAmount">₹10,00,000</span>
+              <span class="info-label">Principal Amount</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculator Categories Grid -->
+      <div class="section-header" style="margin-top: 64px;">
+        <span class="section-tag">Smart Tools</span>
+        <h2>Explore All Calculators</h2>
+        <p>Choose from our wide range of financial calculators to plan your loans, investments, and more.</p>
+      </div>
+
+      <div class="calc-grid">
+        <div class="calc-category">
+          <div class="calc-category-header">
+            <div class="calc-icon"><i class="fas fa-calculator"></i></div>
+            <h3>Loan EMI Calculators</h3>
+          </div>
+          <ul class="calc-list">
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Personal Loan EMI Calculator</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Business Loan EMI Calculator</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Home Loan EMI Calculator</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Mudra Loan EMI Calculator</a></li>
+          </ul>
+        </div>
+        <div class="calc-category">
+          <div class="calc-category-header">
+            <div class="calc-icon"><i class="fas fa-clipboard-check"></i></div>
+            <h3>Loan Eligibility Calculators</h3>
+          </div>
+          <ul class="calc-list">
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Personal Loan Eligibility</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Home Loan Eligibility</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Personal Loan Prepayment</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Home Loan Prepayment</a></li>
+          </ul>
+        </div>
+        <div class="calc-category">
+          <div class="calc-category-header">
+            <div class="calc-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Investment Calculators</h3>
+          </div>
+          <ul class="calc-list">
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Fixed Deposit Calculator</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> Post Office FD Calculator</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> GST Calculator</a></li>
+            <li><a href="#"><i class="fas fa-arrow-right"></i> NPS Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Page CTA -->
+      <div class="page-cta">
+        <div>
+          <h3>Need Help Choosing the Right Loan?</h3>
+          <p>Our financial experts are ready to guide you with personalized recommendations.</p>
+        </div>
+        <a href="/pages/contact" class="btn btn-outline">Talk to Expert <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQs</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about our financial calculators.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            What is an EMI Calculator and how does it work?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              An EMI (Equated Monthly Instalment) Calculator is a tool that helps you determine the monthly payment amount for a loan. It uses the standard mathematical formula: EMI = [P × r × (1+r)^n] / [(1+r)^n – 1], where P is the principal loan amount, r is the monthly interest rate, and n is the number of monthly instalments. Simply input your loan amount, interest rate, and tenure to get instant results.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How accurate are the calculator results?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Our calculators use standard financial formulas and provide highly accurate results. However, the actual EMI or eligibility may vary slightly based on the lender's specific terms, processing fees, and other charges. The calculator results should be used as a reference for financial planning.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I use the calculator for different types of loans?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes, our EMI calculator works for all types of loans — personal loans, home loans, business loans, car loans, education loans, and more. Simply adjust the loan amount, interest rate, and tenure based on the type of loan you're considering. We also have specialized eligibility calculators for specific loan types.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What factors affect my loan eligibility?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Loan eligibility depends on several factors including your monthly income, existing EMIs and loan obligations, credit score (CIBIL), employment type and stability, age, and the loan amount and tenure requested. Our eligibility calculators help you understand your approximate loan eligibility based on these parameters.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How can I reduce my EMI amount?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              There are several ways to reduce your EMI: (1) Opt for a longer loan tenure — this spreads the payment over more months, reducing each EMI. (2) Make a larger down payment to reduce the principal amount. (3) Negotiate a lower interest rate with your lender. (4) Consider balance transfer to a lender offering lower rates. (5) Improve your credit score before applying for better rates. Use our calculator to experiment with different scenarios.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+</BaseLayout>

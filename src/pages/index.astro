@@ -1,0 +1,479 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="TrueCred Loan Expert | Personal Loans starting @ 9.98%">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-star"></i> India's Most Trusted Financial Platform
+          </div>
+          <h1>India's Best Platform for <br><span class="gradient-text">Loans, Cards & Investments</span></h1>
+          <div class="hero-features">
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="fas fa-percent"></i></div>
+              <div>
+                <strong>One Stop for all</strong>
+                <span>Financial Solutions</span>
+              </div>
+            </div>
+            <div class="hero-feature">
+              <div class="hero-feature-icon"><i class="fas fa-bolt"></i></div>
+              <div>
+                <strong>Quick, Easy &</strong>
+                <span>Hassle Free</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-form">
+            <div class="hero-form-header">
+              <h3>Check Your Eligibility Now</h3>
+              <p>Get personalized loan offers in minutes</p>
+            </div>
+            <div class="hero-form-body">
+              <div class="form-group">
+                <input type="tel" placeholder="Enter your mobile number" maxlength="10" class="form-input">
+                <i class="fas fa-mobile-alt form-icon"></i>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block">
+                Get OTP <i class="fas fa-arrow-right"></i>
+              </button>
+              <p class="form-disclaimer">
+                <i class="fas fa-lock"></i> Your data is 100% safe & secure with us
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-stats-grid">
+            <div class="stat-card stat-card-1">
+              <div class="stat-icon"><i class="fas fa-users"></i></div>
+              <div class="stat-number" data-target="5">5 Cr+</div>
+              <div class="stat-label">Happy Customers</div>
+            </div>
+            <div class="stat-card stat-card-2">
+              <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+              <div class="stat-number">80+</div>
+              <div class="stat-label">Lending Partners</div>
+            </div>
+            <div class="stat-card stat-card-3">
+              <div class="stat-icon"><i class="fas fa-indian-rupee-sign"></i></div>
+              <div class="stat-number">₹1 Lakh Cr+</div>
+              <div class="stat-label">Loans Disbursed</div>
+            </div>
+            <div class="stat-card stat-card-4">
+              <div class="stat-icon"><i class="fas fa-award"></i></div>
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Years of Trust</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Services</span>
+        <h2>Explore Our Financial Products</h2>
+        <p>From loans to investments, find everything you need to manage your finances smartly.</p>
+      </div>
+
+      <div class="products-tabs">
+        <button class="tab-btn active" data-tab="loans">
+          <i class="fas fa-hand-holding-dollar"></i> Loans & Cards
+        </button>
+        <button class="tab-btn" data-tab="credit">
+          <i class="fas fa-chart-line"></i> Credit Score & Bills
+        </button>
+        <button class="tab-btn" data-tab="invest">
+          <i class="fas fa-chart-pie"></i> Investment & Insurance
+        </button>
+      </div>
+
+      <div class="tab-content active" id="tab-loans">
+        <div class="products-grid">
+          <a href="/pages/personal-loan" class="product-card featured">
+            <div class="product-badge">Cashback Offer</div>
+            <div class="product-icon"><i class="fas fa-user-tie"></i></div>
+            <h3>Personal Loan</h3>
+            <p>Starting @ 9.98% p.a.</p>
+            <span class="product-cta">Check Offers <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/credit-cards" class="product-card">
+            <div class="product-icon"><i class="fas fa-credit-card"></i></div>
+            <h3>Credit Cards</h3>
+            <p>Best cashback & rewards</p>
+            <span class="product-cta">Compare Cards <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/business-loan" class="product-card featured">
+            <div class="product-badge">Cashback Offer</div>
+            <div class="product-icon"><i class="fas fa-briefcase"></i></div>
+            <h3>Business Loan</h3>
+            <p>Grow your business fast</p>
+            <span class="product-cta">Check Offers <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/home-loan" class="product-card">
+            <div class="product-icon"><i class="fas fa-house-chimney"></i></div>
+            <h3>Home Loan</h3>
+            <p>Starting @ 8.35% p.a.</p>
+            <span class="product-cta">Check Rates <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/loan-against-property" class="product-card">
+            <div class="product-icon"><i class="fas fa-building-columns"></i></div>
+            <h3>Loan Against Property</h3>
+            <p>Unlock your property value</p>
+            <span class="product-cta">Apply Now <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/credit-cards" class="product-card">
+            <div class="product-badge new-badge">100% Approval</div>
+            <div class="product-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Credit Card Against FD</h3>
+            <p>Guaranteed approval</p>
+            <span class="product-cta">Get Card <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/instant-personal-loan" class="product-card">
+            <div class="product-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Instant Personal Loan</h3>
+            <p>Money in minutes</p>
+            <span class="product-cta">Get Instant <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/personal-loan" class="product-card">
+            <div class="product-icon"><i class="fas fa-cart-shopping"></i></div>
+            <h3>Consumer Durable Loan</h3>
+            <p>Buy now, pay in EMIs</p>
+            <span class="product-cta">Check Offers <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-credit">
+        <div class="products-grid">
+          <a href="/pages/credit-score" class="product-card featured">
+            <div class="product-badge">FREE</div>
+            <div class="product-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Credit Score</h3>
+            <p>Check your score for free</p>
+            <span class="product-cta">Check Now <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/credit-score" class="product-card">
+            <div class="product-icon"><i class="fas fa-heart-pulse"></i></div>
+            <h3>Credit Health Pro</h3>
+            <p>Detailed credit analysis</p>
+            <span class="product-cta">Explore <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/credit-score" class="product-card">
+            <div class="product-icon"><i class="fas fa-wrench"></i></div>
+            <h3>Fix Your Credit Score</h3>
+            <p>Expert guided repair</p>
+            <span class="product-cta">Fix Now <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/recharge-bills" class="product-card">
+            <div class="product-icon"><i class="fas fa-receipt"></i></div>
+            <h3>Credit Card Bill</h3>
+            <p>Pay bills instantly</p>
+            <span class="product-cta">Pay Now <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/fastag-recharge" class="product-card">
+            <div class="product-icon"><i class="fas fa-road"></i></div>
+            <h3>FASTag Recharge</h3>
+            <p>Instant toll recharge</p>
+            <span class="product-cta">Recharge <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/mobile-recharge" class="product-card">
+            <div class="product-icon"><i class="fas fa-mobile-screen-button"></i></div>
+            <h3>Mobile Recharge</h3>
+            <p>All operators supported</p>
+            <span class="product-cta">Recharge <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-invest">
+        <div class="products-grid">
+          <a href="/pages/bonds" class="product-card">
+            <div class="product-badge new-badge">SEBI Regulated</div>
+            <div class="product-icon"><i class="fas fa-landmark"></i></div>
+            <h3>Bonds</h3>
+            <p>Invest & earn securely</p>
+            <span class="product-cta">Invest Now <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/fd-interest-rates" class="product-card">
+            <div class="product-icon"><i class="fas fa-piggy-bank"></i></div>
+            <h3>Fixed Deposits</h3>
+            <p>Earn up to 8% returns</p>
+            <span class="product-cta">Compare FDs <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/investments" class="product-card">
+            <div class="product-icon"><i class="fas fa-arrow-trend-up"></i></div>
+            <h3>Market Linked Plans</h3>
+            <p>Higher growth potential</p>
+            <span class="product-cta">Explore <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/nps-calculator" class="product-card">
+            <div class="product-icon"><i class="fas fa-umbrella"></i></div>
+            <h3>NPS</h3>
+            <p>National Pension Scheme</p>
+            <span class="product-cta">Start NPS <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/insurance" class="product-card featured">
+            <div class="product-badge">Upto 25% Off</div>
+            <div class="product-icon"><i class="fas fa-hospital"></i></div>
+            <h3>Health Insurance</h3>
+            <p>Comprehensive coverage</p>
+            <span class="product-cta">Get Quote <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/insurance" class="product-card">
+            <div class="product-icon"><i class="fas fa-heart"></i></div>
+            <h3>Term Life Insurance</h3>
+            <p>Up to 15% discount</p>
+            <span class="product-cta">Get Quote <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/insurance" class="product-card">
+            <div class="product-icon"><i class="fas fa-car"></i></div>
+            <h3>Car Insurance</h3>
+            <p>Lowest price guaranteed</p>
+            <span class="product-cta">Compare <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="/pages/insurance" class="product-card">
+            <div class="product-icon"><i class="fas fa-person-cane"></i></div>
+            <h3>Retirement Plans</h3>
+            <p>Secure your future</p>
+            <span class="product-cta">Plan Now <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why TrueCred</span>
+        <h2>Compare, Choose and Apply with Confidence</h2>
+        <p>India's most trusted platform for all your financial needs</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Wide Choice</h3>
+          <p>Partnerships with large banks, NBFCs and fintech lenders offering a wide choice of products on our platform</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-unlock-keyhole"></i></div>
+          <h3>Easy Access to Credit</h3>
+          <p>Algorithm-based technology provides access to multiple credit offers, ease of comparison and unbiased advice</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Safe & Secure</h3>
+          <p>Your data is completely safe with us. We are ISO/IEC 27001:2022 certified with industry-best security controls</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-user-check"></i></div>
+          <h3>Customer First</h3>
+          <p>Dedicated and highly trained team of experts who help you make the best financial decisions every day</p>
+        </div>
+      </div>
+
+      <div class="trust-bar">
+        <div class="trust-item">
+          <i class="fas fa-hands-holding-circle"></i>
+          <span>Hand picked offers from <strong>80+ lenders</strong></span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-clock"></i>
+          <span>Money in Mins via <strong>Pre-Approved Loans</strong></span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-rocket"></i>
+          <span><strong>Instant</strong> Sanction & Disbursal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Customer Stories</span>
+        <h2>What Our Customers Say</h2>
+        <p>Real stories from real customers who trusted TrueCred Loan Expert</p>
+      </div>
+
+      <div class="testimonials-slider" id="testimonialSlider">
+        <div class="testimonials-track" id="reviewsTrack"></div>
+        <div class="slider-controls">
+          <button class="slider-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div style="text-align:center;margin-top:32px;">
+          <a href="/pages/reviews" class="btn btn-primary" style="padding:14px 36px;">View All Reviews <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculators Section -->
+  <section class="calculators-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Smart Tools</span>
+        <h2>Plan Smart with Calculators</h2>
+        <p>Explore our easy-to-use Loan Eligibility, EMI and Investment Calculators for smarter financial decisions.</p>
+      </div>
+
+      <div class="calc-grid">
+        <div class="calc-category">
+          <div class="calc-category-header">
+            <div class="calc-icon"><i class="fas fa-calculator"></i></div>
+            <h3>Loan EMI Calculators</h3>
+          </div>
+          <ul class="calc-list">
+            <li><a href="/pages/personal-loan-emi-calculator"><i class="fas fa-arrow-right"></i> Personal Loan EMI Calculator</a></li>
+            <li><a href="/pages/business-loan-emi-calculator"><i class="fas fa-arrow-right"></i> Business Loan EMI Calculator</a></li>
+            <li><a href="/pages/home-loan-emi-calculator"><i class="fas fa-arrow-right"></i> Home Loan EMI Calculator</a></li>
+            <li><a href="/pages/calculators"><i class="fas fa-arrow-right"></i> Mudra Loan EMI Calculator</a></li>
+          </ul>
+        </div>
+        <div class="calc-category">
+          <div class="calc-category-header">
+            <div class="calc-icon"><i class="fas fa-clipboard-check"></i></div>
+            <h3>Loan Eligibility Calculators</h3>
+          </div>
+          <ul class="calc-list">
+            <li><a href="/pages/personal-loan-eligibility"><i class="fas fa-arrow-right"></i> Personal Loan Eligibility</a></li>
+            <li><a href="/pages/home-loan-eligibility"><i class="fas fa-arrow-right"></i> Home Loan Eligibility</a></li>
+            <li><a href="/pages/personal-loan-prepayment"><i class="fas fa-arrow-right"></i> Personal Loan Prepayment</a></li>
+            <li><a href="/pages/home-loan-prepayment"><i class="fas fa-arrow-right"></i> Home Loan Prepayment</a></li>
+          </ul>
+        </div>
+        <div class="calc-category">
+          <div class="calc-category-header">
+            <div class="calc-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Investment Calculators</h3>
+          </div>
+          <ul class="calc-list">
+            <li><a href="/pages/fd-calculator"><i class="fas fa-arrow-right"></i> Fixed Deposit Calculator</a></li>
+            <li><a href="/pages/sip-calculator"><i class="fas fa-arrow-right"></i> Post Office FD Calculator</a></li>
+            <li><a href="/pages/calculators"><i class="fas fa-arrow-right"></i> GST Calculator</a></li>
+            <li><a href="/pages/nps-calculator"><i class="fas fa-arrow-right"></i> NPS Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Trusted Network</span>
+        <h2>Our Partners from Across the Industry</h2>
+      </div>
+      <div class="partners-tabs">
+        <button class="partner-tab active" data-partner="all">All</button>
+        <button class="partner-tab" data-partner="unsecured">Unsecured Loans</button>
+        <button class="partner-tab" data-partner="credit">Credit Card</button>
+        <button class="partner-tab" data-partner="home">Home Loan</button>
+        <button class="partner-tab" data-partner="bureau">Credit Bureau</button>
+      </div>
+      <div class="partners-grid" id="partnersGrid"></div>
+    </div>
+  </section>
+
+  <!-- About & CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-grid">
+        <div class="cta-card about-card">
+          <div class="cta-card-content">
+            <h3>About Us</h3>
+            <p>How we are building India's most trusted financial platform</p>
+            <a href="#" class="btn btn-outline">Know More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Most Searched -->
+  <section class="searched-section">
+    <div class="container">
+      <h3 class="searched-title">Most Searched Links</h3>
+      <div class="searched-tabs">
+        <button class="searched-tab active" data-search="cibil">CIBIL</button>
+        <button class="searched-tab" data-search="cards">Credit Cards</button>
+        <button class="searched-tab" data-search="personal">Personal Loan</button>
+        <button class="searched-tab" data-search="business">Business Loan</button>
+        <button class="searched-tab" data-search="home">Home Loan</button>
+      </div>
+
+      <div class="searched-content active" id="search-cibil">
+        <div class="searched-links">
+          <a href="/pages/credit-score">Credit Score</a>
+          <a href="/pages/cibil-score-pan">Check CIBIL Score by PAN Number</a>
+          <a href="/pages/cibil-score-personal-loan">CIBIL Score for Personal Loan</a>
+          <a href="/pages/increase-cibil-score">How to Improve CIBIL Score</a>
+          <a href="/pages/credit-score">Company Credit Report</a>
+          <a href="/pages/cibil-score-credit-card">CIBIL Score for Credit Card</a>
+        </div>
+      </div>
+      <div class="searched-content" id="search-cards">
+        <div class="searched-links">
+          <a href="/pages/credit-cards">Credit Card</a>
+          <a href="/pages/credit-cards">SBI Credit Card</a>
+          <a href="/pages/credit-cards">HDFC Credit Card</a>
+          <a href="/pages/credit-cards">Axis Bank Credit Card</a>
+          <a href="/pages/credit-cards">ICICI Credit Card</a>
+          <a href="/pages/best-credit-cards">Best Credit Cards</a>
+        </div>
+      </div>
+      <div class="searched-content" id="search-personal">
+        <div class="searched-links">
+          <a href="/pages/personal-loan-interest-rates">Personal Loan Interest Rates</a>
+          <a href="/pages/personal-loan">SBI Personal Loan</a>
+          <a href="/pages/personal-loan">HDFC Personal Loan</a>
+          <a href="/pages/personal-loan">Axis Bank Personal Loan</a>
+          <a href="/pages/personal-loan-eligibility">Personal Loan Eligibility</a>
+        </div>
+      </div>
+      <div class="searched-content" id="search-business">
+        <div class="searched-links">
+          <a href="/pages/business-loan-interest-rates">Business Loan Interest Rates</a>
+          <a href="/pages/business-loan">SBI Business Loan</a>
+          <a href="/pages/msme-loan">MSME Loan</a>
+          <a href="/pages/business-loan">HDFC Business Loan</a>
+          <a href="/pages/working-capital-loan">Working Capital Loan</a>
+        </div>
+      </div>
+      <div class="searched-content" id="search-home">
+        <div class="searched-links">
+          <a href="/pages/home-loan-interest-rates">Home Loan Interest Rates</a>
+          <a href="/pages/home-loan">HDFC Home Loan</a>
+          <a href="/pages/home-loan">SBI Home Loan</a>
+          <a href="/pages/home-loan">PNB Home Loan</a>
+          <a href="/pages/home-loan">ICICI Home Loan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

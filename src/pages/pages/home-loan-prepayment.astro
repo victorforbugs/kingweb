@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home Loan Prepayment Calculator | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>Home Loan Prepayment Calculator</span></div>
+      <h1>Home Loan Prepayment Calculator</h1>
+      <p class="hero-sub">See how much you can save by making extra payments on your home loan. Calculate tenure reduction, interest savings, and optimize your prepayment strategy.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-piggy-bank"></i> <span>Save Lakhs in Interest</span></div>
+        <div class="highlight-item"><i class="fas fa-calendar-minus"></i> <span>Reduce Tenure by Years</span></div>
+        <div class="highlight-item"><i class="fas fa-ban"></i> <span>Zero Charges (Floating)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>Why Prepay Your Home Loan?</h2>
+          <p>Home loan prepayment is one of the most powerful financial moves you can make. Since home loans run for 20-30 years, even a small lump sum prepayment in the early years can save you lakhs in interest and shave years off your tenure. The savings are magnified because the prepayment reduces the principal on which interest is calculated for all remaining years.</p>
+          <p>Per RBI guidelines, there are <strong>no prepayment or foreclosure charges on floating-rate home loans</strong> taken from banks and NBFCs. This means you can make partial or full prepayments any time without any penalty — making it a risk-free way to save money.</p>
+
+          <h3>How Prepayment Savings Are Calculated</h3>
+          <p>When you make a lump sum prepayment, the outstanding principal decreases. If you choose to keep your EMI the same, the loan gets repaid faster (reduced tenure). The interest savings are the difference between the total interest without prepayment and the total interest with prepayment. Early prepayments save more because the interest component is highest in the initial years.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-piggy-bank" style="color: var(--primary); margin-right: 8px;"></i> Home Loan Prepayment Calculator</h3>
+            <div class="calc-form-group">
+              <label for="outstandingLoan">Outstanding Loan Amount: <strong id="loanDisplay">₹40,00,000</strong></label>
+              <input type="range" id="outstandingLoan" min="500000" max="50000000" value="4000000" step="100000">
+              <div class="calc-range-labels"><span>₹5 Lakh</span><span>₹5 Crore</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="rateDisplay">8.5%</strong></label>
+              <input type="range" id="interestRate" min="7" max="12" value="8.5" step="0.1">
+              <div class="calc-range-labels"><span>7%</span><span>12%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="remainingTenure">Remaining Tenure (Years): <strong id="tenureDisplay">15 Years</strong></label>
+              <input type="range" id="remainingTenure" min="1" max="30" value="15" step="1">
+              <div class="calc-range-labels"><span>1 Year</span><span>30 Years</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="prepayAmount">Prepayment Amount: <strong id="prepayDisplay">₹5,00,000</strong></label>
+              <input type="range" id="prepayAmount" min="50000" max="10000000" value="500000" step="50000">
+              <div class="calc-range-labels"><span>₹50,000</span><span>₹1 Crore</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Interest Saved</span><span class="calc-value" id="interestSaved">₹7,48,219</span></div>
+              <div class="calc-result-item"><span class="calc-label">Tenure Reduced By</span><span class="calc-value" id="tenureReduced">2 Yrs 3 Mo</span></div>
+              <div class="calc-result-item"><span class="calc-label">New Tenure</span><span class="calc-value" id="newTenure">12 Yrs 9 Mo</span></div>
+            </div>
+          </div>
+
+          <h3>Prepayment Savings Examples</h3>
+          <table class="rate-table">
+            <thead><tr><th>Outstanding</th><th>Prepayment</th><th>Rate</th><th>Remaining Tenure</th><th>Interest Saved</th></tr></thead>
+            <tbody>
+              <tr><td>₹30,00,000</td><td>₹3,00,000</td><td>8.5%</td><td>15 Years</td><td>₹5,61,164</td></tr>
+              <tr><td>₹40,00,000</td><td>₹5,00,000</td><td>8.5%</td><td>18 Years</td><td>₹9,93,632</td></tr>
+              <tr><td>₹50,00,000</td><td>₹10,00,000</td><td>9%</td><td>20 Years</td><td>₹21,06,480</td></tr>
+              <tr><td>₹75,00,000</td><td>₹15,00,000</td><td>8.75%</td><td>22 Years</td><td>₹37,52,940</td></tr>
+              <tr><td>₹1,00,00,000</td><td>₹20,00,000</td><td>9%</td><td>25 Years</td><td>₹56,72,800</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Prepayment Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Visualize Savings</strong> — See the exact rupee amount you'll save in interest over the loan lifetime</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Tenure Impact</strong> — Know how many years and months you can cut from your remaining tenure</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Optimal Timing</strong> — Understand why prepaying early in the loan saves exponentially more</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Annual Prepayment Plan</strong> — Model yearly lump sum payments to create a debt-free timeline</li>
+            <li><i class="fas fa-circle-check"></i> <strong>No Charge Confirmation</strong> — RBI mandates zero prepayment penalty on floating-rate home loans</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Compare Strategies</strong> — Prepay vs invest the surplus? Compare the numbers before deciding</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Outstanding Loan</h4><p>Check your latest loan statement for the current outstanding principal balance.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Set Rate & Tenure</h4><p>Enter your current interest rate and remaining tenure in years from the loan statement.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Enter Prepayment</h4><p>Set the lump sum amount you plan to prepay — could be a bonus, savings, or inheritance.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>See Your Savings</h4><p>View the total interest saved, tenure reduction, and decide if prepayment makes sense for you.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Home Loan Balance Transfer</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Outstanding Loan Amount</option>
+                  <option value="1000000">₹10,00,000</option>
+                  <option value="2000000">₹20,00,000</option>
+                  <option value="3000000">₹30,00,000</option>
+                  <option value="5000000">₹50,00,000</option>
+                  <option value="7500000">₹75,00,000</option>
+                  <option value="10000000">₹1,00,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Get Lower Rate <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+              <a href="/pages/home-loan-eligibility"><i class="fas fa-chevron-right"></i> Home Loan Eligibility</a>
+              <a href="/pages/personal-loan-prepayment"><i class="fas fa-chevron-right"></i> Personal Loan Prepayment</a>
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>Prepayment Calculator — FAQs</h2><p>Common questions about home loan prepayment.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">Are there any charges for prepaying my home loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">For floating-rate home loans, RBI has mandated zero prepayment charges — you can prepay any amount at any time for free. For fixed-rate home loans, lenders may charge 2-3% of the prepaid amount as foreclosure fee. Always check your loan agreement for specific terms.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Should I reduce EMI or tenure after prepayment?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Reducing tenure (keeping EMI same) saves significantly more interest than reducing EMI. For example, on a ₹50 lakh loan at 8.5%, a ₹5 lakh prepayment saves ₹10+ lakhs by reducing tenure, versus only ₹4-5 lakhs by reducing EMI. Choose tenure reduction unless you need immediate cash flow relief.</div></div></div>
+        <div class="faq-item"><button class="faq-question">When is the best time to prepay a home loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">The earlier, the better. In the first 5-7 years of a home loan, 70-80% of your EMI goes toward interest. Prepaying during this period directly reduces the principal on which future interest is calculated, creating a compounding savings effect. Prepaying in the last few years saves relatively less since most of the interest has already been paid.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Should I prepay or invest the surplus money?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">If your home loan rate is 8.5% and you can consistently earn more than 8.5% post-tax from investments (e.g., equity mutual funds over long term), investing may yield better returns. However, prepayment offers guaranteed, risk-free savings. A balanced approach is recommended — prepay partially and invest the rest in SIP for wealth creation.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Will prepayment affect my tax benefits?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, prepayment reduces the outstanding principal, which means future interest payments decrease. This reduces your Section 24(b) deduction (up to ₹2 lakh on interest). However, the actual interest savings from prepayment almost always exceed the tax benefit loss. If you're fully utilizing the ₹2 lakh deduction, consider capping prepayments to maintain maximum tax benefit.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;"><div class="container"><div class="page-cta"><div><h3>Save Lakhs on Your Home Loan</h3><p>Make a smart prepayment or transfer to a lower rate — compare options from 30+ lenders.</p></div><a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Compare Rates <i class="fas fa-arrow-right"></i></a></div></div></section>
+
+</BaseLayout>

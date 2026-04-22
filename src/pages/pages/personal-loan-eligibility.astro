@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Personal Loan Eligibility Calculator | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>Personal Loan Eligibility Calculator</span></div>
+      <h1>Personal Loan Eligibility Calculator</h1>
+      <p class="hero-sub">Find out how much personal loan you're eligible for based on your income, existing obligations, and employment details. Get instant eligibility estimates from 50+ lenders.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-user-check"></i> <span>Eligibility: Instant Check</span></div>
+        <div class="highlight-item"><i class="fas fa-building-columns"></i> <span>50+ Lender Offers</span></div>
+        <div class="highlight-item"><i class="fas fa-shield-halved"></i> <span>No CIBIL Impact</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>How Much Personal Loan Can You Get?</h2>
+          <p>Your personal loan eligibility depends on several factors — primarily your monthly income, existing EMI obligations, credit score, age, and employer profile. Banks and NBFCs use a concept called FOIR (Fixed Obligation to Income Ratio) to determine the maximum EMI you can afford, and then derive the eligible loan amount from that.</p>
+          <p>Most lenders allow a FOIR of 40-60%, meaning your total EMIs (including the new loan) should not exceed 40-60% of your net monthly income. The calculator below uses this approach to estimate your maximum eligible loan amount.</p>
+
+          <h3>How is Eligibility Calculated?</h3>
+          <p>The calculation works in three steps: First, your available monthly surplus is determined by subtracting existing EMIs from a percentage (typically 50%) of your net income. Second, this surplus is treated as the maximum EMI you can afford. Third, using the standard EMI formula in reverse, the maximum loan amount is derived for the given interest rate and tenure.</p>
+          <p><strong>Formula:</strong> Maximum Loan = Available EMI × [(1+r)^n – 1] / [r × (1+r)^n], where Available EMI = (Net Income × 50%) – Existing EMIs.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-user-check" style="color: var(--primary); margin-right: 8px;"></i> Personal Loan Eligibility Calculator</h3>
+            <div class="calc-form-group">
+              <label for="monthlyIncome">Monthly Income (Net): <strong id="incomeDisplay">₹50,000</strong></label>
+              <input type="range" id="monthlyIncome" min="15000" max="500000" value="50000" step="5000">
+              <div class="calc-range-labels"><span>₹15,000</span><span>₹5,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="existingEMI">Existing Monthly EMIs: <strong id="emiDisplay">₹5,000</strong></label>
+              <input type="range" id="existingEMI" min="0" max="200000" value="5000" step="1000">
+              <div class="calc-range-labels"><span>₹0</span><span>₹2,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="interestRate">Interest Rate (% p.a.): <strong id="rateDisplay">12%</strong></label>
+              <input type="range" id="interestRate" min="9" max="24" value="12" step="0.5">
+              <div class="calc-range-labels"><span>9%</span><span>24%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="loanTenure">Tenure (Years): <strong id="tenureDisplay">3 Years</strong></label>
+              <input type="range" id="loanTenure" min="1" max="5" value="3" step="1">
+              <div class="calc-range-labels"><span>1 Year</span><span>5 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Max Eligible Loan</span><span class="calc-value" id="eligibleAmount">₹6,02,069</span></div>
+              <div class="calc-result-item"><span class="calc-label">Max Affordable EMI</span><span class="calc-value" id="maxEMI">₹20,000</span></div>
+              <div class="calc-result-item"><span class="calc-label">FOIR Used</span><span class="calc-value" id="foirUsed">50%</span></div>
+            </div>
+          </div>
+
+          <h3>Example: Eligibility for ₹50,000 Salary</h3>
+          <p>If your net monthly salary is <strong>₹50,000</strong> and you have existing EMIs of <strong>₹5,000</strong>:</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> Available for new EMI = (₹50,000 × 50%) – ₹5,000 = ₹20,000</li>
+            <li><i class="fas fa-circle-check"></i> At 12% for 3 years, eligible loan = approximately ₹6,02,069</li>
+            <li><i class="fas fa-circle-check"></i> At 12% for 5 years, eligible loan = approximately ₹8,98,242</li>
+          </ul>
+
+          <h3>Eligibility by Income Level</h3>
+          <table class="rate-table">
+            <thead><tr><th>Monthly Income</th><th>Existing EMI</th><th>Max EMI (50% FOIR)</th><th>Eligible Loan (3yr, 12%)</th></tr></thead>
+            <tbody>
+              <tr><td>₹25,000</td><td>₹0</td><td>₹12,500</td><td>₹3,76,293</td></tr>
+              <tr><td>₹40,000</td><td>₹5,000</td><td>₹15,000</td><td>₹4,51,552</td></tr>
+              <tr><td>₹60,000</td><td>₹10,000</td><td>₹20,000</td><td>₹6,02,069</td></tr>
+              <tr><td>₹1,00,000</td><td>₹15,000</td><td>₹35,000</td><td>₹10,53,621</td></tr>
+              <tr><td>₹2,00,000</td><td>₹20,000</td><td>₹80,000</td><td>₹24,08,277</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our Eligibility Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Know Before You Apply</strong> — Avoid rejection by checking eligibility first, saving your CIBIL score from hard inquiries</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Income-Based Estimate</strong> — Get realistic loan amounts based on your actual salary and obligations</li>
+            <li><i class="fas fa-circle-check"></i> <strong>FOIR Analysis</strong> — Understand how banks calculate your repayment capacity</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Multi-Scenario Testing</strong> — See how clearing existing debts or increasing tenure improves eligibility</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Zero Score Impact</strong> — Soft check only — your CIBIL score remains unaffected</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Instant Results</strong> — No waiting, no document upload needed for the estimate</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Enter Net Income</h4><p>Input your monthly take-home salary after TDS and other deductions. Use gross minus tax.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Add Existing EMIs</h4><p>Include all current loan EMIs — home loan, car loan, credit card dues — everything counts.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Set Rate & Tenure</h4><p>Enter the expected interest rate and your preferred tenure to get the eligible amount.</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>Check Eligibility</h4><p>See your maximum eligible loan amount and the maximum EMI you can comfortably afford.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Check Your Offer</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Loan Amount Needed</option>
+                  <option value="50000">₹50,000</option>
+                  <option value="100000">₹1,00,000</option>
+                  <option value="200000">₹2,00,000</option>
+                  <option value="500000">₹5,00,000</option>
+                  <option value="1000000">₹10,00,000</option>
+                  <option value="2000000">₹20,00,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Check Eligibility <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/personal-loan-prepayment"><i class="fas fa-chevron-right"></i> Personal Loan Prepayment</a>
+              <a href="/pages/home-loan-eligibility"><i class="fas fa-chevron-right"></i> Home Loan Eligibility</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>Eligibility Calculator — FAQs</h2><p>Common questions about personal loan eligibility.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">What is FOIR and how does it affect my eligibility?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">FOIR (Fixed Obligation to Income Ratio) is the percentage of your income going towards EMIs and other fixed obligations. Most banks prefer a FOIR below 50%, meaning your total EMIs should be less than half your income. A lower FOIR means higher eligibility. Clearing existing debts before applying can significantly boost your eligible amount.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Does my employer affect personal loan eligibility?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, significantly. Employees of Category A companies (top MNCs, government, PSUs) get 10-20% higher eligible amounts and lower interest rates. Category B and C companies may face slightly stricter criteria. Self-employed professionals need to show ITR and business proof for at least 2 years.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I increase my personal loan eligibility?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes — (1) Pay off or reduce existing EMIs to lower your FOIR, (2) Improve your CIBIL score to 750+ for better terms, (3) Apply with a co-applicant to combine incomes, (4) Choose a longer tenure to reduce the per-month EMI, (5) Declare additional income sources like rental income or freelance earnings.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the minimum salary needed for a personal loan?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Most banks require a minimum net monthly salary of ₹15,000-25,000 for personal loan approval. Some digital lenders and NBFCs on our platform accept applicants with salaries as low as ₹12,000. Higher salary naturally qualifies you for larger loan amounts.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Is this eligibility check the same as bank approval?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">No, this is an estimate based on standard banking norms. Actual approval depends on additional factors like CIBIL score, employer category, account history, existing relationship with the bank, and document verification. However, the estimate gives you a reliable ballpark of what to expect.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;">
+    <div class="container">
+      <div class="page-cta">
+        <div><h3>Check Your Personal Loan Eligibility Now</h3><p>Get personalized offers from 50+ lenders without affecting your CIBIL score.</p></div>
+        <a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Get Offers <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

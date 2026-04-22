@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="NPS Calculator — National Pension System | TrueCred Loan Expert">
+
+<section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep"><i class="fas fa-chevron-right"></i></span><a href="/pages/calculators">Calculators</a><span class="sep"><i class="fas fa-chevron-right"></i></span><span>NPS Calculator</span></div>
+      <h1>NPS Calculator</h1>
+      <p class="hero-sub">Plan your retirement with the National Pension System. Calculate your expected corpus at retirement, estimated monthly pension, and tax savings under Section 80CCD.</p>
+      <div class="hero-highlights">
+        <div class="highlight-item"><i class="fas fa-umbrella-beach"></i> <span>Retirement Planning</span></div>
+        <div class="highlight-item"><i class="fas fa-hand-holding-dollar"></i> <span>Tax Saving: ₹2L under 80CCD</span></div>
+        <div class="highlight-item"><i class="fas fa-chart-line"></i> <span>8-10% Historical Returns</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-main">
+          <h2>What is NPS (National Pension System)?</h2>
+          <p>The National Pension System is a government-backed retirement savings scheme regulated by PFRDA. It allows you to contribute regularly during your working years and build a retirement corpus that provides a monthly pension after age 60. NPS is one of the most tax-efficient instruments available — offering up to ₹2 lakh in deductions under Section 80C and 80CCD(1B) combined.</p>
+          <p>NPS invests your money across equity, corporate bonds, and government securities based on your chosen asset allocation. Historically, NPS equity (Tier I) has delivered 10-12% returns, making it superior to traditional pension plans and PPF for long-term retirement planning.</p>
+
+          <h3>How NPS Corpus is Calculated</h3>
+          <p>The NPS corpus at retirement is calculated similarly to SIP: FV = P × [((1+r)^n – 1) / r] × (1+r), where P is your monthly contribution, r is the expected monthly return, and n is the months until retirement. At retirement, you must use at least 40% of the corpus to buy an annuity (pension) and can withdraw up to 60% as a tax-free lump sum.</p>
+
+          <div class="calculator-widget">
+            <h3><i class="fas fa-umbrella-beach" style="color: var(--primary); margin-right: 8px;"></i> NPS Calculator</h3>
+            <div class="calc-form-group">
+              <label for="monthlyContrib">Monthly Contribution: <strong id="contribDisplay">₹5,000</strong></label>
+              <input type="range" id="monthlyContrib" min="500" max="100000" value="5000" step="500">
+              <div class="calc-range-labels"><span>₹500</span><span>₹1,00,000</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="expectedReturn">Expected Return (% p.a.): <strong id="returnDisplay">10%</strong></label>
+              <input type="range" id="expectedReturn" min="8" max="14" value="10" step="0.5">
+              <div class="calc-range-labels"><span>8%</span><span>14%</span></div>
+            </div>
+            <div class="calc-form-group">
+              <label for="yearsToRetire">Years to Retirement: <strong id="yearsDisplay">25 Years</strong></label>
+              <input type="range" id="yearsToRetire" min="5" max="40" value="25" step="1">
+              <div class="calc-range-labels"><span>5 Years</span><span>40 Years</span></div>
+            </div>
+            <div class="calc-result">
+              <div class="calc-result-item"><span class="calc-label">Total Corpus</span><span class="calc-value" id="totalCorpus">₹66,48,474</span></div>
+              <div class="calc-result-item"><span class="calc-label">Lump Sum (60%)</span><span class="calc-value" id="lumpSum">₹39,89,084</span></div>
+              <div class="calc-result-item"><span class="calc-label">Est. Monthly Pension</span><span class="calc-value" id="pension">₹17,730</span></div>
+            </div>
+          </div>
+
+          <h3>NPS Corpus Projections</h3>
+          <table class="rate-table">
+            <thead><tr><th>Monthly Contribution</th><th>Years</th><th>Total Invested</th><th>Corpus @10%</th><th>Est. Pension/month</th></tr></thead>
+            <tbody>
+              <tr><td>₹3,000</td><td>20</td><td>₹7,20,000</td><td>₹22,93,093</td><td>₹6,115</td></tr>
+              <tr><td>₹5,000</td><td>25</td><td>₹15,00,000</td><td>₹66,48,474</td><td>₹17,730</td></tr>
+              <tr><td>₹10,000</td><td>25</td><td>₹30,00,000</td><td>₹1,32,96,948</td><td>₹35,459</td></tr>
+              <tr><td>₹10,000</td><td>30</td><td>₹36,00,000</td><td>₹2,27,93,253</td><td>₹60,782</td></tr>
+              <tr><td>₹25,000</td><td>30</td><td>₹90,00,000</td><td>₹5,69,83,132</td><td>₹1,51,955</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Why Use Our NPS Calculator?</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-circle-check"></i> <strong>Retirement Readiness</strong> — Check if your current NPS contribution is enough for a comfortable retirement</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Pension Estimate</strong> — See your expected monthly pension based on annuity rates</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Tax Savings</strong> — Understand ₹1.5L (80C) + ₹50K (80CCD1B) = ₹2L total NPS tax deduction</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Gap Analysis</strong> — Find how much more you need to contribute to reach your retirement goal</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Lump Sum Planning</strong> — Know the tax-free 60% withdrawal amount for post-retirement needs</li>
+            <li><i class="fas fa-circle-check"></i> <strong>Free to Use</strong> — Calculate unlimited scenarios without any registration</li>
+          </ul>
+
+          <h3>How to Use This Calculator</h3>
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-num">1</div><h4>Set Contribution</h4><p>Enter your monthly NPS contribution. Minimum is ₹500. Higher is better for retirement.</p></div>
+            <div class="step-card"><div class="step-num">2</div><h4>Expected Return</h4><p>Use 10% for aggressive (equity-heavy) and 8-9% for moderate allocation.</p></div>
+            <div class="step-card"><div class="step-num">3</div><h4>Years to Retire</h4><p>Enter years remaining until you turn 60 (NPS maturity age).</p></div>
+            <div class="step-card"><div class="step-num">4</div><h4>View Projections</h4><p>See total corpus, tax-free lump sum, and estimated monthly pension.</p></div>
+          </div>
+        </div>
+
+        <div class="content-sidebar">
+          <div class="sidebar-card">
+            <h3><i class="fas fa-file-signature"></i> Open NPS Account</h3>
+            <form class="sidebar-form" onsubmit="return false;">
+              <div class="form-group"><input type="text" class="form-input" placeholder="Full Name" required></div>
+              <div class="form-group"><input type="tel" class="form-input" placeholder="Mobile Number" maxlength="10" required></div>
+              <div class="form-group">
+                <select class="form-input" required>
+                  <option value="" disabled selected>Monthly Investment</option>
+                  <option value="1000">₹1,000</option>
+                  <option value="3000">₹3,000</option>
+                  <option value="5000">₹5,000</option>
+                  <option value="10000">₹10,000</option>
+                  <option value="25000">₹25,000</option>
+                  <option value="50000">₹50,000</option>
+                </select>
+              </div>
+              <div class="form-group"><input type="text" class="form-input" placeholder="City" required></div>
+              <button type="submit" class="btn btn-primary btn-block" style="width:100%;justify-content:center;">Get Started <i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+          <div class="sidebar-card">
+            <h3><i class="fas fa-link"></i> Other Calculators</h3>
+            <div class="sidebar-links">
+              <a href="/pages/sip-calculator"><i class="fas fa-chevron-right"></i> SIP Calculator</a>
+              <a href="/pages/fd-calculator"><i class="fas fa-chevron-right"></i> FD Calculator</a>
+              <a href="/pages/mutual-fund-calculator"><i class="fas fa-chevron-right"></i> Mutual Fund Calculator</a>
+              <a href="/pages/personal-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Personal Loan EMI</a>
+              <a href="/pages/home-loan-emi-calculator"><i class="fas fa-chevron-right"></i> Home Loan EMI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header"><span class="section-tag">Got Questions?</span><h2>NPS Calculator — FAQs</h2><p>Common questions about NPS investment and returns.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">How much tax can I save with NPS?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">NPS offers dual tax benefits: (1) Up to ₹1.5 lakh under Section 80C (combined with other 80C investments), and (2) Additional ₹50,000 exclusively under Section 80CCD(1B). This means up to ₹2 lakh total deduction. For someone in the 30% tax bracket, this translates to ₹62,400 in annual tax savings.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Can I withdraw NPS before retirement?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Partial withdrawal is allowed after 3 years for specific purposes like higher education, marriage, home purchase, or medical treatment — up to 25% of your contributions. Full premature exit is allowed after 5 years, but you must use 80% to buy an annuity and can only withdraw 20% as lump sum. Staying until 60 gives the best 60-40 split.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Is the 60% lump sum from NPS tax-free?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">Yes, the 60% lump sum withdrawal at maturity (age 60) is completely tax-free. The remaining 40% used to purchase an annuity is also tax-free at the time of purchase. However, the monthly pension received from the annuity is taxable as per your income tax slab.</div></div></div>
+        <div class="faq-item"><button class="faq-question">NPS vs PPF — which is better for retirement?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">NPS typically delivers higher returns (9-12%) than PPF (7.1%) due to equity exposure. NPS also offers extra ₹50,000 tax deduction under 80CCD(1B). However, PPF is fully tax-free (EEE status) while NPS pension is taxable. Ideally, use both — PPF for guaranteed tax-free returns and NPS for higher growth with additional tax benefits.</div></div></div>
+        <div class="faq-item"><button class="faq-question">What is the minimum contribution for NPS?<i class="fas fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner">The minimum annual contribution for NPS Tier I is ₹1,000, with no maximum limit. For Tier II (voluntary savings), the minimum is ₹250. To keep your account active, you must make at least one contribution per year. For meaningful retirement corpus, experts recommend contributing at least ₹5,000-10,000 per month.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content" style="padding-top:0;"><div class="container"><div class="page-cta"><div><h3>Secure Your Retirement with NPS</h3><p>Start your NPS journey today and enjoy up to ₹2 lakh in tax savings while building a retirement corpus.</p></div><a href="/pages/contact" class="btn btn-outline" style="color:#fff;border:2px solid rgba(255,255,255,0.5);padding:14px 32px;font-size:0.95rem;">Open NPS Account <i class="fas fa-arrow-right"></i></a></div></div></section>
+
+</BaseLayout>
